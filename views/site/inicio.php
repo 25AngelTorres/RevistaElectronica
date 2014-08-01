@@ -10,8 +10,8 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Revista Tecno&oacute; Departamente de ingenieria industrial</div>
-                <div class="intro-heading">It's Nice To Meet You</div>
+                <div class="intro-lead-in">Departamento de ingenieria industrial</div>
+                <div class="intro-heading">Revista electr&oacute;nica</div>
                 <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>

@@ -1,23 +1,24 @@
 <?php 
-  define('BASEURL','http://localhost/verano_web/proyecto1');
+  define('BASEURL','http://localhost/verano_2014/proyecto1');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Articulo</title>
 
-    <title>Revista Electronica</title>
-
-    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
+	
+	 <!-- Bootstrap  wys-->
+	<link rel="stylesheet" type="text/css" href="../css/prettify.css"></link>
+	<link rel="stylesheet" type="text/css" href="../bootstrap-wysihtml5.css"></link>
+	
+	
+	
+	 <!-- Custom CSS -->
     <link href="../css/agency.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -26,28 +27,27 @@
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
- <!-- Fancy box-->
-	
-	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.css?v=2.1.5" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-buttons.css?v=1.0.5" />
-    <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<!-- Bootstraps validator -->
+    <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/>
+    <link href="../css/mi.css" rel="stylesheet">
+  </head>
 
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
+  <body role="document" style="background:rgba(51,51,51,1)">
+  
+ 
+  
+  <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">ITC</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Instituto Tecnol&oacute;gico de Celaya</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,26 +57,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">inicio</a>
+                        <a class="page-scroll" href="#services">Services</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Revistas</a>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Agraga Contenido</a>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Contactanos</a>
+                        <a class="page-scroll" href="#team">Team</a>
                     </li>
-					<li>
-                        <a class="page-scroll" href="#team">Administrar revista</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#team"> Ver Mensajes</a>
-                    </li>
-					
                     <li>
-                        <a class="page-scroll" href="#contact">Login</a>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -84,6 +77,8 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-	
-	
-	   <div class="container theme-showcase" role="main">
+
+  
+
+    <div class="container theme-showcase" role="main"  style="background:url(../img/fondo.jpg)">
+

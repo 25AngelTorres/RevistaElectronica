@@ -35,10 +35,10 @@
   				<center><h1> <span class="glyphicon glyphicon-th"></span>Articulos  </h1> </center>
     	</div>
 		<div class="row">
-        	<div class="col-md-3">
+        	<div class="col-md-2">
             	
         	</div>
-            <div class="col-md-6">
+            <div class="col-md-8">
 						    <form class="registro" method="POST" enctype="multipart/form-data">
 							  <div class="form-group" >
 								<label for="nombre">Nombre</label>
@@ -114,25 +114,22 @@
 								<input type="text" class="form-control" id="referencias" name = "referencias" placeholder="Ingresa referencia"/>
 							  </div>
 							  
-							 
-	<div class="hero-unit" style="margin-top:40px">
-		<h1 style="font-size:28px">bootstrap-wysihtml5 <small>Simple, beautiful wysiwyg editors</small></h1>
-		<hr/>
-		<textarea class="textarea" placeholder="Enter text ..." style="width: 810px; height: 200px"></textarea>
-	
-	
-			
-</div>
-														  
 							  
-							  
-<script>
-	$('.textarea').wysihtml5();
-</script>
+							
+                            
+                            
+									<div class="form-group" style="margin-top:40px">
+										<h1 style="font-size:28px">bootstrap-wysihtml5 <small>Simple, beautiful wysiwyg editors</small></h1>
+										<hr/>
+										<textarea class="textarea" placeholder="Enter text ..." style="width: 510px; height: 150px"></textarea>
+									</div>
+									
+									
+							
 
-<script type="text/javascript" charset="utf-8">
-	$(prettyPrint);
-</script>
+
+							  
+							  
 							  
 							  
 							  

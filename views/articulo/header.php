@@ -13,13 +13,17 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 	
 	 <!-- Bootstrap  wys-->
-	<link rel="stylesheet" type="text/css" href="../css/prettify.css"></link>
-	<link rel="stylesheet" type="text/css" href="../bootstrap-wysihtml5.css"></link>
+	<link rel="stylesheet" type="text/css" href="../wysi/lib/css/bootstrap.min.css"></link>
+	<link rel="stylesheet" type="text/css" href="../wysi/lib/css/prettify.css"></link>
+	<link rel="stylesheet" type="text/css" href="../wysi/src/bootstrap-wysihtml5.css"></link>
 	
+	<link href="../css/agency.css" rel="stylesheet">
 	
-	
-	 <!-- Custom CSS -->
-    <link href="../css/agency.css" rel="stylesheet">
+	 <!-- Custom CSS 
+	 
+	 
+	 -->
+    
 
     <!-- Custom Fonts -->
     <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -30,6 +34,11 @@
 	<!-- Bootstraps validator -->
     <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/>
     <link href="../css/mi.css" rel="stylesheet">
+	
+	
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-buttons.css?v=1.0.5" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" />
   </head>
 
   <body role="document" style="background:rgba(51,51,51,1)">

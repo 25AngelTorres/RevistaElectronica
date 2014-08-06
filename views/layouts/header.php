@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost/verano_web/proyecto1');
+  define('BASEURL','http://localhost:8080/PWeb/RevistaElectronica');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,8 +56,13 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                    <li class="page-scroll">
+                        <a href=<?php echo '"'.BASEURL.'"'; ?>>
+                            <span class="glyphicon glyphicon-home"></span> Inicio
+                        </a>
+                    </li>
                     <li>
-                        <a class="page-scroll" href="#services">inicio</a>
+                        <a class="page-scroll" href="#services">servicio</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Revistas</a>
@@ -67,17 +72,25 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Contactanos</a>
+                    </li><!--
+					<li>
+                        <a class="page-scroll" href="#">Administrar revista</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="#team">Administrar revista</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#team"> Ver Mensajes</a>
-                    </li>
-					
-                    <li>
-                        <a class="page-scroll" href="#contact">Login</a>
-                    </li>
+                        <a class="page-scroll" href="#"> Ver Mensajes</a>
+                    </li>-->
+					<?php
+                        if (!isset($_SESSION['user'])) {
+                            echo '<li class="page-scroll">
+                            <a href="'.BASEURL.'/views/site/login.php"><span class="glyphicon glyphicon-user"></span> Login</a>
+                            </li>';
+                        }
+                        if (isset($_SESSION['user'])) {
+                            echo '<li class="page-scroll">
+                            <a href="'.BASEURL.'/views/site/logout.php"><span class="glyphicon glyphicon-off"></span> Logout</a>
+                            </li>';
+                        }
+                    ?>                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

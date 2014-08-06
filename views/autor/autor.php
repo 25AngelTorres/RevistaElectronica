@@ -9,7 +9,11 @@
       include ('../../models/Autor.php');
       include ('../../controllers/AutorController.php');
       include ('../../libs/Er.php');
+
 	  include ('../layouts/header.php');
+
+	  include ('../articulo/header.php');
+
   if(isset($_POST['nombre'])){
   
   $autorC = new  AutorController();
@@ -33,6 +37,9 @@
 <section id="bd" class="bg-light-gray">
         <div class="container">
   
+  
+  
+  <div class="container theme-showcase" role="main"  style="background:url(../img/fondo.jpg)">
      
     	<div class="row">
   				<center><h1> <span class="glyphicon glyphicon-th"></span>Autor de revista  </h1> </center>

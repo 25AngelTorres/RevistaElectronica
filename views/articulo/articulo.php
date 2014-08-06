@@ -28,7 +28,7 @@
 ?>
   
   
-  
+  <div class="container theme-showcase" role="main"  style="background:url(../img/fondo.jpg)">
   
      
     	<div class="row">
@@ -45,31 +45,30 @@
 								<input type="text" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre de la revista" />
 							  </div>
 							  
-							  
-							   
-				
-							  <div class="form-group" >
-								<label for="resumen">Resumen</label>
-								<input type="text" class="form-control" id="resumen" name = "resumen" placeholder="resumen de revista" />
+							  <div class="form-group" style="margin-top:40px">
+										<label for="resumen">Resumen</label>
+										<textarea class="textarea" id="resumen" name = "resumen"placeholder="Enter text ..." style="width: 510px; height: 150px"></textarea>
 							  </div>
 							  
-							  <div class="form-group" >
-								<label for="abstrac">Abstracci&oacute;n</label>
-								<input type="text" class="form-control" id="abstrac" name = "abstrac" placeholder="abstract de revista" />
-							  </div>
-							  <div class="form-group" >
-								<label for="introduccion">Introducci&oacute;n</label>
-								<input type="text" class="form-control" id="introduccion" name = "introduccion" placeholder="introduccion de revista" />
+							  <div class="form-group" style="margin-top:40px">
+										<label for="abstrac">Abstracci&oacute;n</label>
+										 <textarea class="textarea" id="abstrac" name = "abstrac" placeholder="abstract de revista" style="width: 510px; height: 150px"></textarea>
 							  </div>
 							  
-							  <div class="form-group" >
-								<label for="metodologia">Metodologia</label>
-								<input type="text" class="form-control" id="metodologia" name = "metodologia" placeholder="metodologia de revista"/>
+							  <div class="form-group" style="margin-top:40px">
+										<label for="introduccion">Introducci&oacute;n</label>
+										 <textarea class="textarea"  id="introduccion" name = "introduccion" placeholder="introduccion de revista" style="width: 510px; height: 150px"></textarea>
 							  </div>
 							  
-							  <div class="form-group" >
-								<label for="contenido">Contenido</label>
-								<input type="text" class="form-control" id="contenido" name = "contenido" placeholder="contenido de revista" />
+							  
+							   <div class="form-group" style="margin-top:40px">
+										<label for="metodologia">Metodologia</label>
+										 <textarea class="textarea"  id="metodologia" name = "metodologia" placeholder="metodologia de revista" style="width: 510px; height: 150px"></textarea>
+							  </div>
+							  
+							  <div class="form-group" style="margin-top:40px">
+										<label for="contenido">Contenido</label>
+										 <textarea class="textarea"   id="contenido" name = "contenido" placeholder="contenido de revista" style="width: 510px; height: 150px"></textarea>
 							  </div>
 							  
 							  <div class="form-group">
@@ -102,6 +101,12 @@
 							  <div class="form-group" >
 								<label for="conclusiones">Conclusiones</label>
 								<input type="text" class="form-control" id="conclusiones" name = "conclusiones" placeholder="conclusion de revista" />
+							  </div>
+							  
+							  
+							   <div class="form-group" style="margin-top:40px">
+										<label for="conclusiones">Conclusiones</label>
+										 <textarea class="textarea"   id="conclusiones" name = "conclusiones" placeholder="conclusion de revista" style="width: 510px; height: 150px"></textarea>
 							  </div>
 							  
 							  <div class="form-group" >

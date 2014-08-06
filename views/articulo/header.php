@@ -89,5 +89,5 @@
 
   
 
-    <div class="container theme-showcase" role="main"  style="background:url(../img/fondo.jpg)">
+    
 

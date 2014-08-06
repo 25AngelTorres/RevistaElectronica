@@ -6,6 +6,12 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
 
+	<!-- Bootstrap Wysi -->
+	<script src="../wysi/lib/js/wysihtml5-0.3.0.js"></script>
+    <script src="../wysi/lib/js/prettify.js"></script>
+	<script src="../wysi/src/bootstrap-wysihtml5.js"></script>
+	
+	
     <!-- Plugin JavaScript -->
     <script src="../js/jquery.easing.min.js"></script>
     <script src="../js/classie.js"></script>

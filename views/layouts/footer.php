@@ -1,15 +1,17 @@
+<script src="../js/wysihtml5-0.3.0.js"></script>
+
 <!-- jQuery -->
 <!--// Add jQuery library -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="../js/jquery.js"></script>
 
+<script src="../js/prettify.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-wysihtml5.js"></script>
 
-	<!-- Bootstrap Wysi -->
-	<script src="../wysi/lib/js/wysihtml5-0.3.0.js"></script>
-    <script src="../wysi/lib/js/prettify.js"></script>
-	<script src="../wysi/src/bootstrap-wysihtml5.js"></script>
+	
 	
 	
     <!-- Plugin JavaScript -->

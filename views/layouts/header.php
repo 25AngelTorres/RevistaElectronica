@@ -16,9 +16,6 @@
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="../css/prettify.css"></link>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap-wysihtml5.css"></link>
-
 <!-- Bootstrap Validator -->
         <link rel="stylesheet" href="../css/bootstrap.css"/>
         <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/> 
@@ -29,6 +26,7 @@
         <!-- Optionally add helpers - button, thumbnail and/or media -->
         <link rel="stylesheet" href="../css/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
         <link rel="stylesheet" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
 
     <!-- Custom CSS -->
     <link href="../css/agency.css" rel="stylesheet">
@@ -42,6 +40,9 @@
 
 <!-- Datepicket -->
        <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.css" />
+
+<link rel="stylesheet" type="text/css" href="../css/prettify.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-wysihtml5.css"></link>
 
 <!-- Estilo personalizado -->
     <link rel="stylesheet" type="text/css" href="../css/maincss.css" />

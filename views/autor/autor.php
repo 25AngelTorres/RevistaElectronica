@@ -1,9 +1,6 @@
 
   <?php 
   session_start();
-  
-  
-  
  
       include ('../../libs/adodb5/adodb-pager.inc.php');
       include ('../../libs/adodb5/adodb.inc.php');
@@ -12,20 +9,29 @@
       include ('../../models/Autor.php');
       include ('../../controllers/AutorController.php');
       include ('../../libs/Er.php');
-	  include ('../autor/header.php');
+	  include ('../layouts/header.php');
   if(isset($_POST['nombre'])){
   
   $autorC = new  AutorController();
   $autorC->insertaAutor($_POST);
   
-  
-  
-  
+
   }
 ?>
   
-  
-  
+  <!--<body id="page-top" class="index">-->
+
+    <!-- Header -->
+    <header id="headerP">
+        <div class="container">
+            <div class="intro-text">                
+            </div>
+        </div>
+    </header>
+
+
+<section id="bd" class="bg-light-gray">
+        <div class="container">
   
      
     	<div class="row">
@@ -60,5 +66,7 @@
             		
         	</div>
         </div>
+      </div>
+    </section>
         
 	<?php include ('../layouts/footer.php'); ?>

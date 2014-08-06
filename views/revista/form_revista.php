@@ -123,14 +123,14 @@ $RevistaC = new RevistaController();
 					   <div class="form-group">
                         <label for="directorio" class="col-sm-3 control-label" >Directorio de la revista</label>
                           <div class='col-sm-6'>
-                            <textarea class="textarea form-control" id="directorio" name = "directorio" placeholder="Enter text ..." style="width: 510px; height: 150px"><?php echo $RevistaC->get_directorio(); ?></textarea>
+                            <textarea class="textarea form-control" id="directorio" name = "directorio" style="width: 510px; height: 150px"><?php echo $RevistaC->get_directorio(); ?></textarea>
                         </div>
                          </div>
 <!--Editorial -->
          				<div class="form-group">
                         <label for="editorial" class="col-sm-3 control-label">Editorial de la revista</label>
                           <div class='col-sm-6'>
-                        <textarea class="form-control" id="editorial" name="editorial"><?php echo $RevistaC->get_editorial(); ?></textarea>
+                        <textarea class="form-control textarea" id="editorial" name="editorial"  style="width: 510px; height: 150px"> <?php echo $RevistaC->get_editorial(); ?></textarea>
                         </div>
          				 </div>
 

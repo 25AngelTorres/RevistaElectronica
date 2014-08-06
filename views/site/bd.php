@@ -39,7 +39,7 @@
                             <div class="col-md-6">
                                 <div class="list-group">
                                     <a href="../revista/form_revista.php" class="list-group-item">Revista</a>
-                                    <a href="../autor/form_autor.php" class="list-group-item">Autor</a>
+                                    <a href="../autor/autor.php" class="list-group-item">Autor</a>
                                 </div>
                             </div>
                             <div class="col-md-6">

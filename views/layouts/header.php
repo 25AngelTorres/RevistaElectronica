@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost/RevistaElectronica');
+  define('BASEURL','http://localhost:8080/PWeb/RevistaElectronica');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,6 +16,11 @@
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Bootstrap  wys-->
+    <link rel="stylesheet" type="text/css" href="../wysi/lib/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="../wysi/lib/css/prettify.css"></link>
+    <link rel="stylesheet" type="text/css" href="../wysi/src/bootstrap-wysihtml5.css"></link>
+
     <!-- Custom CSS -->
     <link href="../css/agency.css" rel="stylesheet">
 
@@ -25,8 +30,8 @@
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
  <!-- Fancy box-->
-	
 	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.css?v=2.1.5" media="screen" />
     <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-buttons.css?v=1.0.5" />
     <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" />

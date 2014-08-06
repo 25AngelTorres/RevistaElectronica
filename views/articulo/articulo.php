@@ -12,7 +12,8 @@
       include ('../../models/Articulo.php');
       include ('../../controllers/ArticuloController.php');
       include ('../../libs/Er.php');
-	  include ('../articulo/header.php');
+	  //include ('../articulo/header.php');
+	  include ('../layouts/header.php');
     $articuloC = new  ArticuloController();
   if(isset($_POST['nombre'])){
   
@@ -27,13 +28,26 @@
  
 ?>
   
-  
+  <!--<body id="page-top" class="index">-->
+
+    <!-- Header -->
+    <header id="headerP">
+        <div class="container">
+            <div class="intro-text">                
+            </div>
+        </div>
+    </header>
+
   <div class="container theme-showcase" role="main"  style="background:url(../img/fondo.jpg)">
   
      
     	<div class="row">
-  				<center><h1> <span class="glyphicon glyphicon-th"></span>Articulos  </h1> </center>
-    	</div>
+            <div class="col-md-12"><center>
+              <div class="page-header">
+                <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Articulos <small>Insertar</small></h1>
+              </div>
+            </center></div>
+          </div>
 		<div class="row">
         	<div class="col-md-2">
             	

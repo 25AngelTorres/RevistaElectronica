@@ -166,9 +166,9 @@ class Revista extends Modelo{
     public function set_directorio($valor){
         //objeto de la clase Er
         $er = new Er();
-        if ( !$er->valida_nombre($valor) ){
+        /*if ( !$er->valida_nombre($valor) ){
             $this->errores[] = 'Formato de directorio no valido ('.$valor.').';
-        }
+        }*/
         //trim simplemente quita espacios al principio y final de la cadena
         $this->directorio = trim($valor);
     }
@@ -179,9 +179,9 @@ class Revista extends Modelo{
     public function set_editorial($valor){
         //objeto de la clase Er
         $er = new Er();
-        if ( !$er->valida_nombre($valor) ){
+        /*if ( !$er->valida_nombre($valor) ){
             $this->errores[] = 'Formato de editorial no valido ('.$valor.').';
-        }
+        }*/
         //trim simplemente quita espacios al principio y final de la cadena
         $this->editorial = trim($valor);
     }

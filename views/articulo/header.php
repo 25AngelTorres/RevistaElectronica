@@ -33,7 +33,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 	<!-- Bootstraps validator -->
     <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/>
-    <link href="../css/mi.css" rel="stylesheet">
+    
 	
 	
 	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.css?v=2.1.5" media="screen" />

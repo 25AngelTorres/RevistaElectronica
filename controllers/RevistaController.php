@@ -18,7 +18,11 @@ Contine las clases
 		public function inserta_revista($datos, $files){
 			//Solo es para acegurarse que se estan enviando los archivos
 
-		    //die();
+		    /*echo "<pre>";
+		      print_r($_POST);
+		      print_r($_FILES);
+		    echo "</pre>Desde controller";
+		    die();*/
 		    
 			//Conexion con Equipo el cual continene Modelo y Conexion
 			//$revista=new Revista();
@@ -46,7 +50,7 @@ Contine las clases
 			else{
 				$this->muestra_exito=true;
 				//Copiar la direccion del archivo a un nueva carpeta
-				move_uploaded_file($files['portada']['tmp_name'], "../img/".$files['portada']['name']);
+				move_uploaded_file($files['portada']['tmp_name'], "../upload/".$files['portada']['name']);
 				//Insertar en la Base de datos
 				$this->inserta($this->get_atributos());
 			};

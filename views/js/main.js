@@ -1,5 +1,34 @@
 
 $(document).ready(function() {
+
+  /* Ocultar Formularios */
+    $('#opc_inser_bd').hide();
+    
+
+/* Mostrar tablas a insertar */
+    $('#btn_opc_inser_bd').click(
+      function(){
+        $('#opc_inser_bd').show('slow');
+      }
+    );
+    
+    $('#MostrarJugador').click(
+      function(){
+        $('#form_tipo_jugador').show('slow');
+        $('#form_tipo_entrenador').hide();
+      }
+    );
+    
+    $('#MostrarEntrenador').click(
+      function(){
+        $('#form_tipo_entrenador').show('slow');  
+        $('#form_tipo_jugador').hide();
+      }
+    );
+
+
+
+
 	$(".fancybox-thumb").fancybox({
 		prevEffect	: 'none',
 		nextEffect	: 'none',
@@ -328,7 +357,6 @@ $(document).ready(function() {
             $(function () {
                 $('#datetimepicker6').datetimepicker();
             });
-
 
 
 

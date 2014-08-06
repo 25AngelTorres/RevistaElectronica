@@ -12,8 +12,6 @@
 
 	  include ('../layouts/header.php');
 
-	  include ('../articulo/header.php');
-
   if(isset($_POST['nombre'])){
   
   $autorC = new  AutorController();
@@ -42,8 +40,13 @@
   <div class="container theme-showcase" role="main"  style="background:url(../img/fondo.jpg)">
      
     	<div class="row">
-  				<center><h1> <span class="glyphicon glyphicon-th"></span>Autor de revista  </h1> </center>
-    	</div>
+            <div class="col-md-12"><center>
+              <div class="page-header">
+                <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Autor <small>Insertar</small></h1>
+              </div>
+              </center>
+            </div>
+          </div>
 		<div class="row">
         	<div class="col-md-3">
             	

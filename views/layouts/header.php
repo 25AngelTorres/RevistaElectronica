@@ -16,10 +16,19 @@
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Bootstrap  wys-->
-    <link rel="stylesheet" type="text/css" href="../wysi/lib/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="../wysi/lib/css/prettify.css"></link>
-    <link rel="stylesheet" type="text/css" href="../wysi/src/bootstrap-wysihtml5.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/prettify.css"></link>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-wysihtml5.css"></link>
+
+<!-- Bootstrap Validator -->
+        <link rel="stylesheet" href="../css/bootstrap.css"/>
+        <link rel="stylesheet" href="../css/bootstrapValidator.min.css"/> 
+
+<!-- Fancybox -->
+        <!-- Add fancyBox -->
+        <link rel="stylesheet" href="../css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+        <!-- Optionally add helpers - button, thumbnail and/or media -->
+        <link rel="stylesheet" href="../css/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+        <link rel="stylesheet" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 
     <!-- Custom CSS -->
     <link href="../css/agency.css" rel="stylesheet">
@@ -31,10 +40,8 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
- <!-- Fancy box-->
-	<link rel="stylesheet" type="text/css" href="../css/jquery.fancybox.css?v=2.1.5" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-buttons.css?v=1.0.5" />
-    <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" />
+<!-- Datepicket -->
+       <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.css" />
 
 <!-- Estilo personalizado -->
     <link rel="stylesheet" type="text/css" href="../css/maincss.css" />
@@ -70,10 +77,10 @@
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">servicio</a>
+                        <a class="page-scroll" href="#portfolio">servicio</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Revistas</a>
+                        <a class="page-scroll" href="#team">Revistas</a>
                     </li>
                     <?php
                         if (isset($_SESSION['user'])) {
@@ -84,8 +91,9 @@
                     ?>
 
                     <li>
-                        <a class="page-scroll" href="#team">Contactanos</a>
-                    </li><!--
+                        <a class="page-scroll" href="#contact">Contactanos</a>
+                    </li>
+                    <!--
 					<li>
                         <a class="page-scroll" href="#">Administrar revista</a>
                     </li>

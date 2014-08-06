@@ -1,9 +1,8 @@
 <?php 
-  define('BASEURL','http://localhost:8080/PWeb/RevistaElectronica');
+  define('BASEURL','http://localhost/RevistaElectronica');
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
 
     <meta charset="utf-8">
@@ -32,7 +31,11 @@
     <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-buttons.css?v=1.0.5" />
     <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" />
 
+<!-- Estilo personalizado -->
+    <link rel="stylesheet" type="text/css" href="../css/maincss.css" />
+
 </head>
+
 
 <body id="page-top" class="index">
 
@@ -67,9 +70,14 @@
                     <li>
                         <a class="page-scroll" href="#portfolio">Revistas</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Agraga Contenido</a>
-                    </li>
+                    <?php
+                        if (isset($_SESSION['user'])) {
+                            echo '<li class="page-scroll">
+                            <a href="'.BASEURL.'/views/site/bd.php"><span class="glyphicon glyphicon-user"></span> Agrega Contenido</a>
+                            </li>';
+                        }
+                    ?>
+
                     <li>
                         <a class="page-scroll" href="#team">Contactanos</a>
                     </li><!--
@@ -99,4 +107,4 @@
     </nav>
 	
 	
-	   <div class="container theme-showcase" role="main">
+	   <!-- <div class="container theme-showcase" role="main"> -->

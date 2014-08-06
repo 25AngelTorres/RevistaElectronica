@@ -24,7 +24,6 @@ $RevistaC = new RevistaController();
     die();*/
 
     
-    
     $RevistaC->inserta_revista($_POST, $_FILES);
 
 

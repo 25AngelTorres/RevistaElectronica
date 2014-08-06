@@ -1,7 +1,6 @@
-
-  <?php 
-  session_start();
-  
+<?php 
+//VISTA PRIVADA
+  include ('../../libs/security.php');
   
   
  

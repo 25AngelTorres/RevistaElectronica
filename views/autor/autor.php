@@ -1,6 +1,6 @@
-
-  <?php 
-  session_start();
+<?php 
+//VISTA PRIVADA
+  include ('../../libs/security.php');
  
       include ('../../libs/adodb5/adodb-pager.inc.php');
       include ('../../libs/adodb5/adodb.inc.php');

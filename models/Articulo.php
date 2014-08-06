@@ -175,27 +175,26 @@ class Articulo extends Modelo{
        
    }
    
+//archivo_pdf
    public function get_archivo_pdf(){
-       return $this->archivo_pdf;
-   } 
-
-   public function set_archivo_pdf($valor){
-
-       $er = new Er();
-       
-       if ( !$er->valida_pdf($valor['name']) ){
-           $this->errores[] = "Este archivo_pdf (".$valor.") no es valido";
-       }
-	   
-	   if ( !$er->valida_archivo($valor['size']) ){
-           $this->errores[] = "Este archivo_pdf (".$valor.") es muy grande";
-       }
-
-              
-       $this->archivo_pdf = trim($valor['name']);
-       
-   }
-   
+        return $this->archivo_pdf;
+    } 
+    public function set_archivo_pdf($valor){
+        //objeto de la clase Er
+        $er = new Er();
+        if ( !$er->valida_pdf_name($valor['name']) ){
+            $this->errores[] = 'Formato del archivo no es valido ('.$valor["name"].').';
+        }
+        if ( !$er->valida_pdf_type($valor['type']) ){
+            $this->errores[] = 'Formato del archivo no es valido ('.$valor["type"].').';
+        }
+        if ( $valor['size']>10000000){
+            $this->errores[] = 'Tamaño de imagen ('.$valor["size"].'). Sobrepasa el tamaño maximo';
+        }
+        //trim simplemente quita espacios al principio y final de la cadena
+        $this->archivo_pdf = trim($valor['name']);
+    }
+ 
    
    public function get_id_status(){
        return $this->id_status;
@@ -205,7 +204,7 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_numero($valor) ){
+       if ( !$er->valida_numero_entero($valor) ){
            $this->errores[] = "Este id_status (".$valor.") no es valido";
        }
 

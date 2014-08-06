@@ -86,6 +86,7 @@ class Revista extends Modelo{
     public function set_fecha($valor){
         //objeto de la clase Er
         $er = new Er();
+
         /*
         if ( !$er->valida_fecha($valor) ){
             $this->errores[] = 'Formato de fecha no valido ('.$valor.').';

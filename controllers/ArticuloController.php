@@ -41,8 +41,8 @@
 			}
 			else{
 			
-			
-				move_uploaded_file($archivo['archivo_pdf']['tmp_name'],"../img/".$archivo['archivo_pdf']['name']);
+				move_uploaded_file($archivo['archivo_pdf']['tmp_name'],"../upload/".$archivo['archivo_pdf']['name']);
+
 				$this->inserta($this->get_atributos());
 			}
 			

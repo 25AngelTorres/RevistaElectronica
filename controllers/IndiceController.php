@@ -15,11 +15,12 @@ Contine las clases
 		//Funcion para insertar un equipo
 		public function inserta_Indice($datos){
 			//Solo es para acegurarse que se estan enviando los archivos
-		    //echo "<pre>";
-		      //print_r($datos);
-		      //echo   'Desde Controller';
+		    /*echo "<pre>";
+		    print_r($datos);
+		    echo   'Desde Controller';
 
-		    //echo "</pre>";
+		    echo "</pre>";
+		    die();*/
 			//Conexion con Equipo el cual continene Modelo y Conexion
 			//$autor=new Autor();
 

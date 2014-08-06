@@ -16,12 +16,15 @@
 //Inicializar el controlador
   $IndiceC = new IndiceController();
   if(isset($_POST['titulo']))  {
+     /*echo "<pre>";
+      print_r($_POST);
+    echo "</pre>";
+    die();*/
 
     $IndiceC->inserta_Indice($_POST);
   }
 
 ?>
-
 
 <!--<body id="page-top" class="index">-->
 
@@ -33,7 +36,8 @@
         </div>
     </header>
                             
-     
+<section id="bd" class="bg-light-gray">
+        <div class="container">
           <div class="row">
               <div class="col-md-12">
                 <div class="page-header">
@@ -45,51 +49,50 @@
           <?php
             $IndiceC->errores();
           ?>
-		  <div class="row">
-                <form role="form" id="registerForm" method="POST">
-				  <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="nombre">Titulo</label>
-                    <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $IndiceC->get_titulo(); ?>">
-                  </div>
-				  </div>
-				  <div class="col-md-6">
-				  <div class="form-group">
-                    <label for="numero">N&uacute;mero</label>
-                    <input type="text" class="form-control" id="numero"  name="numero" value="<?php echo $IndiceC->get_numero(); ?>">
-                  </div>
-				  </div>
-				  <div class="col-md-12">
-					<div class="form-group">
-                    <label for="id_revista" class="col-sm-3 control-label">id_revista: </label>
-                    <div class="col-sm-6">
-                                                      <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' -->
-                        <?php echo $IndiceC->getDropDown('id_revista','nombre','revista','id_revista','id_revista'); ?>
-                    </div>
-                  </div>
-          </div>
+    		  <div class="row">
+                    <form role="form" id="registerForm" method="POST">
+    				  <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="nombre">Titulo</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $IndiceC->get_titulo(); ?>">
+                      </div>
+    				  </div>
+    				  <div class="col-md-6">
+    				  <div class="form-group">
+                        <label for="numero">N&uacute;mero</label>
+                        <input type="text" class="form-control" id="numero"  name="numero" value="<?php echo $IndiceC->get_numero(); ?>">
+                      </div>
+    				  </div>
+    				  <div class="col-md-12">
+    					<div class="form-group">
+                        <label for="id_revista" class="col-sm-3 control-label">id_revista: </label>
+                        <div class="col-sm-6">
+                                                          <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' -->
+                            <?php echo $IndiceC->getDropDown('id_revista','nombre','revista','id_revista','id_revista'); ?>
+                        </div>
+                      </div>
+              </div>
 
-      <div class="row">
-        <div class=col-md-12>
-          <div class="form-group">
-                    <div class="col-sm-12">
-                      <input type="submit" value="Enviar"  />
-                    </div>
-          </div>
-        </div>
-      </div>
-                </form>
-      </div>
-      
-		  <div class="row">
-        <div class="col-md-12">
-                
-                <?php echo $IndiceC->show_grid(); ?>
-                
-                </div>
+          <div class="row">
+            <div class=col-md-12>
+              <div class="form-group">
+                        <div class="col-sm-12">
+                          <input type="submit" value="Enviar"  />
+                        </div>
               </div>
             </div>
-        </div> <!-- container -->
+          </div>
+                    </form>
+          </div>
+      
+    		  <div class="row">
+            <div class="col-md-12">
+                    
+                    <?php echo $IndiceC->show_grid(); ?>
+                    
+            </div>
+          </div>
+  </div> <!-- container -->
 </section>
 
 

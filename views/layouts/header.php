@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost:8080/PWeb/RevistaElectronica');
+  define('BASEURL','http://localhost:8080/RevistaElectronica');
 ?>
 <!DOCTYPE html>
 <html lang="es">

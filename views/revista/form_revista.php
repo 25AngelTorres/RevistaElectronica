@@ -119,19 +119,24 @@ $RevistaC = new RevistaController();
                        </div>
                       </div>
 <!-- Directorio -->
-					   <div class="form-group">
-                        <label for="directorio" class="col-sm-3 control-label" >Directorio de la revista</label>
-                          <div class='col-sm-6'>
-                            <textarea class="textarea form-control" id="directorio" name = "directorio" style="width: 510px; height: 150px"><?php echo $RevistaC->get_directorio(); ?></textarea>
-                        </div>
-                         </div>
+					  
+						 
+						 <div class="form-group" >
+								 <label for="directorio" class="col-sm-3 control-label" >Directorio de la revista</label>
+								   <div class='col-sm-6'>
+								  <div id='edit4' name = "directorio" style="  background-color:rgba(255,255,255,1);">  </div>	
+                                </div>	
+								</div>
 <!--Editorial -->
-         				<div class="form-group">
-                        <label for="editorial" class="col-sm-3 control-label">Editorial de la revista</label>
-                          <div class='col-sm-6'>
-                        <textarea class="form-control textarea" id="editorial" name="editorial"  style="width: 510px; height: 150px"> <?php echo $RevistaC->get_editorial(); ?></textarea>
-                        </div>
-         				 </div>
+         				
+						 
+						 
+						 <div class="form-group" >
+								  <label for="editorial" class="col-sm-3 control-label">Editorial de la revista</label>
+								   <div class='col-sm-6'>
+								  <div id='edit5' name = "editorial" style="  background-color:rgba(255,255,255,1);">  </div>	
+                                </div>	
+								</div>
 
 <!-- Status -->
  					<div class="form-group">

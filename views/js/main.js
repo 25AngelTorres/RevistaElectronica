@@ -749,6 +749,3 @@ $(document).ready(function() {
     });
 });
 
-$('.textarea').wysihtml5();
-$(prettyPrint);
-

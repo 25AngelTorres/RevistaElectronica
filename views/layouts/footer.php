@@ -1,4 +1,4 @@
-<script src="../wysi/lib/js/wysihtml5-0.3.0.js"></script>
+
 
 <!-- jQuery -->
 <!--// Add jQuery library -->
@@ -7,12 +7,15 @@
 
 
 
-<script src="../wysi/lib/js/prettify.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
 
-<script src="../wysi/src/bootstrap-wysihtml5.js"></script>
+
+
+ <!-- Wysi -->
+  
 
 
     
@@ -58,3 +61,31 @@
     <script type="text/javascript" src="../js/moment.js"></script>
     <script type="text/javascript" src="../js/bootstrap-datetimepicker.js"></script>
     <script type="text/javascript" src="../js/bootstrap-datetimepicker.es.js"></script> 
+
+ <script src="../wysi/js/libs/jquery-1.10.2.min.js"></script>
+  <script src="../wysi/js/libs/beautify/beautify-html.js"></script>
+  <script src="../wysi/js/froala_editor.min.js"></script>
+  
+  <script src="../js/froala_editor_ie8.min.js"></script>
+  <script src="../wysi/js/froala_editor.min.js"></script>
+  
+  <script src="../wysi/js/plugins/tables.min.js"></script>
+  <script src="../wysi/js/plugins/colors.min.js"></script>
+  <script src="../wysi/js/plugins/fonts/fonts.min.js"></script>
+  <script src="../wysi/js/plugins/fonts/font_family.min.js"></script>
+  <script src="../wysi/js/plugins/fonts/font_size.min.js"></script>
+  <script src="../wysi/js/plugins/block_styles.min.js"></script>
+  <script src="../wysi/js/plugins/video.min.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+          $('#edit').editable({inlineMode: false, theme: 'dark'})
+		  $('#edit1').editable({inlineMode: false, theme: 'dark'})
+		  $('#edit2').editable({inlineMode: false, theme: 'dark'})
+		  $('#edit3').editable({inlineMode: false, theme: 'dark'})
+		  $('#edit4').editable({inlineMode: false, theme: 'dark'})
+		  $('#edit5').editable({inlineMode: false, theme: 'dark'})
+		  $('#edit6').editable({inlineMode: false, theme: 'dark'})
+      });</script>
+	  
+	   

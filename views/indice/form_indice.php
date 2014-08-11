@@ -80,6 +80,7 @@
                           <input type="submit" value="Enviar"  />
                         </div>
               </div>
+              <button type="button" class="btn btn-default"><a href="../subindice/form_subindice.php">Agregar subindice</a></button>
             </div>
           </div>
                     </form>

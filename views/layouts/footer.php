@@ -49,7 +49,7 @@
   <script src="../wysi/js/froala_editor.min.js"></script>
   
   <script src="../js/froala_editor_ie8.min.js"></script>
-  <script src="../wysi/js/froala_editor.min.js"></script>
+  <script src="../wysi/js/froala_editor.js"></script>
   
   <script src="../wysi/js/plugins/tables.min.js"></script>
   <script src="../wysi/js/plugins/colors.min.js"></script>

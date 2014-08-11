@@ -122,7 +122,9 @@ $RevistaC = new RevistaController();
 						<div class="form-group" >
 								 <label for="directorio" class="col-sm-3 control-label" >Directorio de la revista</label>
 								   <div class='col-sm-6'>
-								  <div id='directorio' name = "directorio" style="  background-color:rgba(255,255,255,1);">  </div>	
+								   <textarea id='directorio' name="directorio" style="background-color:rgba(255,255,255,1);">  
+
+                   </textarea>
                                 
                   </div>	
 						</div>
@@ -133,7 +135,7 @@ $RevistaC = new RevistaController();
 						 <div class="form-group" >
 								  <label for="editorial" class="col-sm-3 control-label">Editorial de la revista</label>
 								   <div class='col-sm-6'>
-								  <div id='edit5' name = "editorial" style="  background-color:rgba(255,255,255,1);">  </div>	
+								  <textarea id='edit5' name = "editorial" style="  background-color:rgba(255,255,255,1);">  </textarea>	
                                 </div>	
 								</div>
 

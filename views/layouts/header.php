@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost:8080/PWeb/RevistaElectronica');
+  define('BASEURL','http://localhost:8080/RevistaElectronica');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,9 +17,10 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap  wys-->
-    <link rel="stylesheet" type="text/css" href="../wysi/lib/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="../wysi/lib/css/prettify.css"></link>
-    <link rel="stylesheet" type="text/css" href="../wysi/src/bootstrap-wysihtml5.css"></link>
+	  <link href="../wysi/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	  <link href="../wysi/css/froala_editor.min.css" rel="stylesheet" type="text/css">
+	  <link href="../wysi/css/froala_reset.min.css" rel="stylesheet" type="text/css">
+	  <link href="../wysi/css/themes/dark.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
     <link href="../css/agency.css" rel="stylesheet">

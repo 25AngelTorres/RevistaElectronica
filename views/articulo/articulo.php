@@ -1,9 +1,6 @@
 <?php 
 //VISTA PRIVADA
-  include ('../../libs/security.php');
-  
-  
- 
+      include ('../../libs/security.php');
       include ('../../libs/adodb5/adodb-pager.inc.php');
       include ('../../libs/adodb5/adodb.inc.php');
       include ('../../models/Conexion.php');
@@ -11,7 +8,6 @@
       include ('../../models/Articulo.php');
       include ('../../controllers/ArticuloController.php');
       include ('../../libs/Er.php');
-	  //include ('../articulo/header.php');
 	  include ('../layouts/header.php');
     $articuloC = new  ArticuloController();
   if(isset($_POST['nombre'])){
@@ -58,48 +54,51 @@
 								<input type="text" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre de la revista" />
 							  </div>
 							  
-							  <div class="form-group" style="margin-top:40px">
-										<label for="resumen">Resumen</label>
-										<textarea class="textarea" id="resumen" name = "resumen"placeholder="Enter text ..." style="width: 510px; height: 150px"></textarea>
-							  </div>
 							  
-							  <div class="form-group" style="margin-top:40px">
-										<label for="abstrac">Abstracci&oacute;n</label>
-										 <textarea class="textarea" id="abstrac" name = "abstrac" placeholder="abstract de revista" style="width: 510px; height: 150px"></textarea>
-							  </div>
+							  <div class="form-group" >
+								  <label for="resumen">Resumen</label>
+								  <div id='edit' name = "resumen" style="  background-color:rgba(255,255,255,1);">  </div>	
+                                </div>	
+								
+									
+								
+								<div class="form-group" >
+								  <label for="abstrac">Abstracci&oacute;n</label>
+								  <div id='edit1' name = "abstrac" style="  background-color:rgba(255,255,255,1);">  </div>	
+                                </div>	
+								
+								<div class="form-group" >
+								  <label for="introduccion">Introducci&oacute;n</label>
+								  <div id='edit2' name = "introduccion" style="  background-color:rgba(255,255,255,1);">  </div>	
+                                </div>	
+								
+								<div class="form-group" >
+								  <label for="metodologia">Metodologia</label>
+								  <div id='edit3' name = "metodologia"style="  background-color:rgba(255,255,255,1);">  </div>	
+                                </div>	
+								
+								<div class="form-group" >
+								 <label for="contenido">Contenido</label>
+								  <div id='edit4' name = "contenido"style="  background-color:rgba(255,255,255,1);">  </div>	
+                                </div>	
 							  
-							  <div class="form-group" style="margin-top:40px">
-										<label for="introduccion">Introducci&oacute;n</label>
-										 <textarea class="textarea"  id="introduccion" name = "introduccion" placeholder="introduccion de revista" style="width: 510px; height: 150px"></textarea>
-							  </div>
-							  
-							  
-							   <div class="form-group" style="margin-top:40px">
-										<label for="metodologia">Metodologia</label>
-										 <textarea class="textarea"  id="metodologia" name = "metodologia" placeholder="metodologia de revista" style="width: 510px; height: 150px"></textarea>
-							  </div>
-							  
-							  <div class="form-group" style="margin-top:40px">
-										<label for="contenido">Contenido</label>
-										 <textarea class="textarea"   id="contenido" name = "contenido" placeholder="contenido de revista" style="width: 510px; height: 150px"></textarea>
+						  
+							  <div class="form-group">
+							      <label for="fecha_creacion">Fecha de creaci&oacute;n</label>
+                                      <div class='input-group date' id='datetimepicker2'>
+								          <input type='text' class="form-control" id="fecha_creacion" name = "fecha_creacion" placeholder="Ingresa fecha" />
+								          <span class="input-group-addon"> <span class="glyphicon glyphicon-calendar"></span>
+								         </span>
+							          </div>
 							  </div>
 							  
 							  <div class="form-group">
-							  <label for="fecha_creacion">Fecha de creaci&oacute;n</label>
-                               <div class='input-group date' id='datetimepicker2'>
-								<input type='text' class="form-control" id="fecha_creacion" name = "fecha_creacion" placeholder="Ingresa fecha" />
-								<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-								</span>
-							</div>
-							</div>
-							  
-							   <div class="form-group">
 								<label for="archiv_pdf">archivo pdf</label>
 								<input type="file" id="archivo_pdf" name = "archivo_pdf"/>
 								<p class="help-block">Carga un archivo pdf</p>
+							  </div>
 								
-								
-								<div class="form-group">
+							  <div class="form-group">
 							    <label for="id_status">id de status</label>
 								<select class="form-control" id="id_status" name = "id_status" placeholder="elige id de status">
 								        <option value=""></option>
@@ -110,17 +109,13 @@
 										
 								</select>
 							  </div>
-							  </div >
+							  
+							 
+							  
 							  <div class="form-group" >
-								<label for="conclusiones">Conclusiones</label>
-								<input type="text" class="form-control" id="conclusiones" name = "conclusiones" placeholder="conclusion de revista" />
-							  </div>
-							  
-							  
-							   <div class="form-group" style="margin-top:40px">
-										<label for="conclusiones">Conclusiones</label>
-										 <textarea class="textarea"   id="conclusiones" name = "conclusiones" placeholder="conclusion de revista" style="width: 510px; height: 150px"></textarea>
-							  </div>
+								  <label for="conclusiones">Conclusiones</label>
+								  <div id='edit5' name = "conclusiones" style="  background-color:rgba(255,255,255,1);">  </div>	
+                                </div>	
 							  
 							  <div class="form-group" >
 								<label for="agradecimientos">Agradecimientos</label>
@@ -135,12 +130,8 @@
 							  
 							
                             
-                            
-									<div class="form-group" style="margin-top:40px">
-										<h1 style="font-size:28px">bootstrap-wysihtml5 <small>Simple, beautiful wysiwyg editors</small></h1>
-										<hr/>
-										<textarea class="textarea" placeholder="Enter text ..." style="width: 510px; height: 150px"></textarea>
-									</div>
+                               
+									
 									
 									
 							
@@ -156,6 +147,7 @@
 							  </div>
 							  
 							</form>
+							
 				
         	</div>
 			<div class="col-md-2">

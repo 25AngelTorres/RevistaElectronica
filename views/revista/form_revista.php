@@ -17,11 +17,11 @@
 //Inicializar el controlador
 $RevistaC = new RevistaController();
   if(isset($_POST['nombre']))  {
-    /*echo "<pre>";
+    echo "<pre>";
       print_r($_POST);
       print_r($_FILES);
     echo "</pre>";
-    die();*/
+    //die();
 
     
     $RevistaC->inserta_revista($_POST, $_FILES);
@@ -119,14 +119,13 @@ $RevistaC = new RevistaController();
                        </div>
                       </div>
 <!-- Directorio -->
-					  
-						 
-						 <div class="form-group" >
+						<div class="form-group" >
 								 <label for="directorio" class="col-sm-3 control-label" >Directorio de la revista</label>
 								   <div class='col-sm-6'>
-								  <div id='edit4' name = "directorio" style="  background-color:rgba(255,255,255,1);">  </div>	
-                                </div>	
-								</div>
+								  <div id='directorio' name = "directorio" style="  background-color:rgba(255,255,255,1);">  </div>	
+                                
+                  </div>	
+						</div>
 <!--Editorial -->
          				
 						 

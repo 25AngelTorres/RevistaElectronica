@@ -5,19 +5,8 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="../js/jquery.js"></script>
 
-
-
-
-
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-
-
-
- <!-- Wysi -->
-  
-
-
     
 <!-- Script personalizado
     Todas las funciones deben estar
@@ -54,15 +43,8 @@
     <script src="../js/contact_me.js"></script>
 
 
-<!-- Bootstrap Validator -->
-    <script type="text/javascript" src="../js/bootstrapValidator.min.js"></script>
-
-<!-- Bootstrap datetimepicker -->
-    <script type="text/javascript" src="../js/moment.js"></script>
-    <script type="text/javascript" src="../js/bootstrap-datetimepicker.js"></script>
-    <script type="text/javascript" src="../js/bootstrap-datetimepicker.es.js"></script> 
-
- <script src="../wysi/js/libs/jquery-1.10.2.min.js"></script>
+<!-- Para textarea -->
+<!-- <script src="../wysi/js/libs/jquery-1.10.2.min.js"></script> -->
   <script src="../wysi/js/libs/beautify/beautify-html.js"></script>
   <script src="../wysi/js/froala_editor.min.js"></script>
   
@@ -77,15 +59,22 @@
   <script src="../wysi/js/plugins/block_styles.min.js"></script>
   <script src="../wysi/js/plugins/video.min.js"></script>
   
-  <script>
+  <!-- <script>
   $(document).ready(function() {
-          $('#edit').editable({inlineMode: false, theme: 'dark'})
+      $('#edit').editable({inlineMode: false, theme: 'dark'})
 		  $('#edit1').editable({inlineMode: false, theme: 'dark'})
 		  $('#edit2').editable({inlineMode: false, theme: 'dark'})
 		  $('#edit3').editable({inlineMode: false, theme: 'dark'})
 		  $('#edit4').editable({inlineMode: false, theme: 'dark'})
 		  $('#edit5').editable({inlineMode: false, theme: 'dark'})
 		  $('#edit6').editable({inlineMode: false, theme: 'dark'})
-      });</script>
+      });
+  </script> -->
 	  
+<!-- Bootstrap Validator -->
+    <script type="text/javascript" src="../js/bootstrapValidator.min.js"></script>
 	   
+<!-- Bootstrap datetimepicker -->
+    <script type="text/javascript" src="../js/moment.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-datetimepicker.es.js"></script> 

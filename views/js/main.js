@@ -27,8 +27,6 @@ $(document).ready(function() {
     );
 
 
-
-
 	$(".fancybox-thumb").fancybox({
 		prevEffect	: 'none',
 		nextEffect	: 'none',
@@ -47,7 +45,7 @@ $(document).ready(function() {
 		maxWidth	: 800,
 		maxHeight	: 600,
 		fitToView	: false,
-		width		: '70%',
+		width		  : '70%',
 		height		: '70%',
 		autoSize	: false,
 		closeClick	: false,
@@ -55,8 +53,14 @@ $(document).ready(function() {
 		closeEffect	: 'none'
 	});
 
-
-
+/* TeaxtArea*/
+  $('#edit').editable({inlineMode: false, theme: 'dark'})
+  $('#edit1').editable({inlineMode: false, theme: 'dark'})
+  $('#edit2').editable({inlineMode: false, theme: 'dark'})
+  $('#edit3').editable({inlineMode: false, theme: 'dark'})
+  $('#directorio').editable({inlineMode: false, theme: 'dark'})
+  $('#edit5').editable({inlineMode: false, theme: 'dark'})
+  $('#edit6').editable({inlineMode: false, theme: 'dark'})
 
 
 /*--Esto es para el validator*/
@@ -317,7 +321,7 @@ $(document).ready(function() {
                     }
                   }
                 },
-                editorial: {
+                /*editorial: {
                   message: 'La editorial no es valida',
                   validators: {
                     notEmpty: {
@@ -334,7 +338,7 @@ $(document).ready(function() {
                     }
                   }
                 },
-                directorio: {
+                /*directorio: {
                   message: 'El directorio no es valido',
                   validators: {
                     notEmpty: {
@@ -345,7 +349,7 @@ $(document).ready(function() {
                       message: 'Formato de directorio no valido'
                     }
                   }
-                }
+                }*/
               }
             });
 

@@ -16,8 +16,8 @@ class Conexion {
     function Conexion(){
         $this->db = ADONewConnection('mysqli');
         $this->db->debug = false;
-			       //ip     user      pass    bd
-        $this->db->Connect('localhost','industrial_usr','L34S6P3','industrial_db');
+			       			//ip     user      pass    bd
+        $this->db->Connect('localhost','root','root','revista');
     }
     
 }

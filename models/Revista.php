@@ -115,7 +115,7 @@ class Revista extends Modelo{
     public function set_titulo($valor){
         //objeto de la clase Er
         $er = new Er();
-        if ( !$er->valida_nombre($valor) ){
+        if ( !$er->valida_titulo($valor) ){
             $this->errores[] = 'Formato de titulo no valido ('.$valor.').';
         }
         //trim simplemente quita espacios al principio y final de la cadena
@@ -128,7 +128,7 @@ class Revista extends Modelo{
     public function set_subtitulo($valor){
         //objeto de la clase Er
         $er = new Er();
-        if ( !$er->valida_nombre($valor) ){
+        if ( !$er->valida_titulo($valor) ){
             $this->errores[] = 'Formato de subtitulo no valido ('.$valor.').';
         }
         //trim simplemente quita espacios al principio y final de la cadena

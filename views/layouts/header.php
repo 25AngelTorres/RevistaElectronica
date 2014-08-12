@@ -1,5 +1,5 @@
 <?php 
-  define('BASEURL','http://localhost/RevistaElectronica');
+  define('BASEURL','http://localhost:8080/RevistaElectronica');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -44,7 +44,9 @@
         <link rel="stylesheet" href="../css/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 
 <!-- Datepicket -->
-       <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.css" />
+        <link href="../css/datepicker.css" rel="stylesheet">
+        <link href="../css/prettify.css" rel="stylesheet">
 
 <!-- Estilo personalizado -->
     <link rel="stylesheet" type="text/css" href="../css/maincss.css" />
@@ -81,12 +83,14 @@
                             <span class="glyphicon glyphicon-home"></span> Inicio
                         </a>
                     </li>
+                <!--
                     <li>
                         <a class="page-scroll" href="#portfolio">servicio</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Revistas</a>
                     </li>
+                -->
                     <?php
                         if (isset($_SESSION['user'])) {
                             echo '<li class="page-scroll">
@@ -94,11 +98,11 @@
                             </li>';
                         }
                     ?>
-
+                <!--
                     <li>
                         <a class="page-scroll" href="#contact">Contactanos</a>
                     </li>
-                    <!--
+                    
 					<li>
                         <a class="page-scroll" href="#">Administrar revista</a>
                     </li>

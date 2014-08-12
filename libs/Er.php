@@ -44,7 +44,17 @@ class Er {
 
 //Nombre	
 	public function valida_nombre($valor){
-		$exp_reg = "/^[a-zA-Z_ñÑ -]{3,25}$/"; 
+		$exp_reg = "/^[a-zA-Z_ñÑ -]{3,100}$/"; 
+		if (preg_match($exp_reg, $valor)) {
+			 return true;
+		} else { 
+			 return false;
+		} 
+	}
+
+//Titulo y subtitulo
+	public function valida_titulo($valor){
+		$exp_reg = "/^[0-9a-zA-Z_ñÑ -\/\"¡!¿?#$%&+*]{3,250}$/"; 
 		if (preg_match($exp_reg, $valor)) {
 			 return true;
 		} else { 
@@ -138,7 +148,7 @@ class Er {
 
 //Clave
 	public function valida_clave($valor){
-		$exp_reg = "/^[0-9a-zA-Z_.-]{3,16}$/"; 
+		$exp_reg = "/^[0-9a-zA-Z_.-]{3,20}$/"; 
 		if (preg_match($exp_reg, $valor)) {
 			 return true;
 		} else { 

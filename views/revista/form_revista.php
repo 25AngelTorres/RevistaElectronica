@@ -76,12 +76,19 @@ $RevistaC = new RevistaController();
                   </div>
 <!-- Fecha -->
                   <div class="form-group">
+                    <label for="fecha" class="col-sm-3 control-label">Fecha</label>
+                    <div class ='col-sm-6'>
+                      <input type="text" class="form-control" id="dp1" name="fecha" value="<?php echo $RevistaC->get_fecha(); ?>" />
+                    </div>
+                  </div>
+<!-- 
+                  <div class="form-group">
                     <label for="datetimepicker6" class="col-sm-3 control-label">Fecha: </label>
-                  <!-- Ejemplo 6 de Boostrap datetimepicker -->
+                  <!-- Ejemplo 6 de Boostrap datetimepicker --
                     <div class='col-sm-6'>
                       <input type='text' class="form-control" id='datetimepicker6' name="fecha" value="<?php echo $RevistaC->get_fecha(); ?>" />
                     </div> 
-                  </div>
+                  </div>-->
 <!-- Volumen -->
                       <div class="form-group">
                       	<label for="volumen" class="col-sm-3 control-label">Volumen de la revista</label>

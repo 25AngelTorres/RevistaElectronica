@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.0.9
 -- http://www.phpmyadmin.net
 --
@@ -219,11 +219,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id_usuario`, `email`, `password`, `rol`) VALUES
 (1, 'lara@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin'),
-(2, 'ale@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin'),
-(3, 'angel@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'cliente'),
-(4, 'david@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'cliente'),
-(5, 'rodro@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'gerente'),
-(6, 'grimi@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'supervisor');
+(2, 'angel@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'admin'),
+(3, 'grimaldo@hotmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'supervisor'),
+(4, 'RevistaIndustrial@itcelaya.edu.mx', 'c2720bbe25ca0864f8c498deab910d0b', 'admin');
 
 --
 -- Restricciones para tablas volcadas

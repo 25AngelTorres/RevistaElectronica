@@ -1,4 +1,5 @@
-
+<!-- Datepicker-->
+    <script src="../js/prettify.js"></script>
 
 <!-- jQuery -->
 <!--// Add jQuery library -->
@@ -75,6 +76,8 @@
     <script type="text/javascript" src="../js/bootstrapValidator.min.js"></script>
 	   
 <!-- Bootstrap datetimepicker -->
-    <script type="text/javascript" src="../js/moment.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/urchin.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="../js/moment.js"></script>
     <script type="text/javascript" src="../js/bootstrap-datetimepicker.js"></script>
-    <script type="text/javascript" src="../js/bootstrap-datetimepicker.es.js"></script> 
+    <script type="text/javascript" src="../js/bootstrap-datetimepicker.es.js"></script> -->

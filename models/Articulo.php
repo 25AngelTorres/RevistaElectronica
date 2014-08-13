@@ -77,7 +77,7 @@ class Articulo extends Modelo{
        $er = new Er();
        
        if ( !$er->valida_noVacio($valor) ){
-           $this->errores[] = "Datos no validos  (".$valor.") no es valido";
+           $this->errores[] = "Resumen vacio.";
        }
 
               
@@ -95,7 +95,7 @@ class Articulo extends Modelo{
        $er = new Er();
        
        if ( !$er->valida_noVacio($valor) ){
-           $this->errores[] = "Este abstrac (".$valor.") no es valido";
+           $this->errores[] = "Abstrac vacio";
        }
 
               
@@ -112,7 +112,7 @@ class Articulo extends Modelo{
        $er = new Er();
        
        if ( !$er->valida_noVacio($valor) ){
-           $this->errores[] = "Este introduccion (".$valor.") no es valido";
+           $this->errores[] = "Introduccion vacia";
        }
 
               
@@ -130,7 +130,7 @@ class Articulo extends Modelo{
        $er = new Er();
        
        if ( !$er->valida_noVacio($valor) ){
-           $this->errores[] = "Este metodologia (".$valor.") no es valido";
+           $this->errores[] = "Metodologia vacia.";
        }
 
               
@@ -148,7 +148,7 @@ class Articulo extends Modelo{
        $er = new Er();
        
        if ( !$er->valida_noVacio($valor) ){
-           $this->errores[] = "Este contenido (".$valor.") no es valido";
+           $this->errores[] = "Contenido vacio.";
        } 
 
               
@@ -223,7 +223,7 @@ class Articulo extends Modelo{
        $er = new Er();
        
       if ( !$er->valida_noVacio($valor) ){
-           $this->errores[] = "Este conclusiones (".$valor.") no es valido";
+           $this->errores[] = 'Conclusiones vacio.';
        }
 
               

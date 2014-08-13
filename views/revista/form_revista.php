@@ -16,11 +16,11 @@ include ('../../libs/adodb5/adodb-pager.inc.php');
 //Inicializar el controlador
 $RevistaC = new RevistaController();
   if(isset($_POST['nombre']))  {
-    echo "<pre>";
+    /*echo "<pre>";
       print_r($_POST);
       print_r($_FILES);
     echo "</pre>";
-    //die();
+    //die();*/
 
     
     $RevistaC->inserta_revista($_POST, $_FILES);

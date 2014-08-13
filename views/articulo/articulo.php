@@ -136,7 +136,7 @@
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="agradecimientos">Agradecimientos</label>
 								<div class="col-lg-9">
-								<input type="text" class="form-control" id="agradecimientos" name = "agradecimientos" placeholder="Ingresa agradecimiento"/>
+								<input type="text" class="form-control" id="agradecimientos" name = "agradecimientos" placeholder="Ingresa agradecimiento" value="<?php echo $articuloC->get_agradecimientos(); ?>"/>
 							  </div>
 							  </div>
 
@@ -144,7 +144,7 @@
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="referencias">Referencias</label>
 								<div class="col-lg-9">
-								<input type="text" class="form-control" id="referencias" name = "referencias" placeholder="Ingresa referencia"/>
+								<input type="text" class="form-control" id="referencias" name = "referencias" placeholder="Ingresa referencia" value="<?php echo $articuloC->get_referencias(); ?>" />
 							  </div>
 							  </div>
 							  

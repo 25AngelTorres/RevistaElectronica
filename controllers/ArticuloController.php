@@ -66,9 +66,7 @@
 				    }
 				 echo' </div>';
 				 
-			  }else{
-					 echo 'no entra al if';
-				   }
+			  }
 		}
 		
 		

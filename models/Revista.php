@@ -168,7 +168,7 @@ class Revista extends Modelo{
         //objeto de la clase Er
         $er = new Er();
         if ( !$er->valida_noVacio($valor) ){
-            $this->errores[] = 'Formato de directorio no valido ('.$valor.').';
+            $this->errores[] = 'Directorio no puede estar vacio.';
         }
         //trim simplemente quita espacios al principio y final de la cadena
         $this->directorio = trim($valor);
@@ -181,7 +181,7 @@ class Revista extends Modelo{
         //objeto de la clase Er
         $er = new Er();
         if ( !$er->valida_noVacio($valor) ){
-            $this->errores[] = 'Formato de editorial no valido ('.$valor.').';
+            $this->errores[] = 'Editorial no puede estar vacia.';
         }
         //trim simplemente quita espacios al principio y final de la cadena
         $this->editorial = trim($valor);

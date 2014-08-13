@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   `id_articulo` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(500) NOT NULL,
   `resumen` longtext,
-  `abstract` longtext,
+  `abstrac` longtext,
   `introduccion` longtext,
   `metodologia` longtext,
   `contenido` longtext,

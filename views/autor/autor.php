@@ -12,10 +12,11 @@
 
 	  include ('../layouts/header.php');
 
-  if(isset($_POST['nombre'])){
-  
-  $autorC = new  AutorController();
-  $autorC->insertaAutor($_POST);
+	  $autorC = new  AutorController();
+      if(isset($_POST['nombre'])){
+      
+	  $autorC->insertaAutor($_POST);
+      $autorC->error();
   
 
   }
@@ -37,7 +38,7 @@
   
   
   
-  <div class="container theme-showcase" role="main"  style="background:url(../img/fondo.jpg)">
+  
      
     	<div class="row">
             <div class="col-md-12"><center>
@@ -52,18 +53,24 @@
             	
         	</div>
             <div class="col-md-6">
-						    <form class="registro" method="POST">
-							  <div class="form-group" method="POST">
-								<label for="nombre">Nombre</label>
-								<input type="continente" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre del autor">
+						    <form class="form-horizontal" id="registerForm"  method="POST">
+							  <div class="form-group" >
+								<label class="col-lg-2 control-label" for="nombre">Nombre</label>
+								<div class="col-lg-9">
+								<input type="continente" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre del autor" >
 							  </div>
-							  <div class="form-group" method="POST">
-								<label for="apellidos">Apellidos</label>
-								<input type="continente" class="form-control" id="apellidos" name = "apellidos" placeholder="Ingresa apellidos del autor">
 							  </div>
-							  <div class="form-group" method="POST">
-								<label for="email">Email</label>
-								<input type="continente" class="form-control" id="email" name = "email" placeholder="Ingresa email">
+							  <div class="form-group" >
+								<label class="col-lg-2 control-label" for="apellidos">Apellidos</label>
+								<div class="col-lg-9">
+								<input type="continente" class="form-control" id="apellidos" name = "apellidos" placeholder="Ingresa apellidos del autor" >
+							  </div>
+							  </div>
+							  <div class="form-group" >
+								<label class="col-lg-2 control-label" for="email">Email</label>
+								<div class="col-lg-9">
+								<input type="continente" class="form-control" id="email" name = "email" placeholder="Ingresa email" >
+							  </div>
 							  </div>
 							  <div>
 							  <button type="submit" class="btn btn-default">Enviar</button>
@@ -76,6 +83,7 @@
             		
         	</div>
         </div>
+		
       </div>
     </section>
         

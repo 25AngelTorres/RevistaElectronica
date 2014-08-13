@@ -76,8 +76,8 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
-           $this->errores[] = "Este apellido  (".$valor.") no es valido";
+       if ( !$er->valida_noVacio($valor) ){
+           $this->errores[] = "Datos no validos  (".$valor.") no es valido";
        }
 
               
@@ -94,7 +94,7 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
+       if ( !$er->valida_noVacio($valor) ){
            $this->errores[] = "Este abstrac (".$valor.") no es valido";
        }
 
@@ -111,7 +111,7 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
+       if ( !$er->valida_noVacio($valor) ){
            $this->errores[] = "Este introduccion (".$valor.") no es valido";
        }
 
@@ -129,7 +129,7 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
+       if ( !$er->valida_noVacio($valor) ){
            $this->errores[] = "Este metodologia (".$valor.") no es valido";
        }
 
@@ -147,9 +147,9 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
+       if ( !$er->valida_noVacio($valor) ){
            $this->errores[] = "Este contenido (".$valor.") no es valido";
-       }
+       } 
 
               
        $this->contenido = trim($valor);
@@ -166,10 +166,10 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-      /* if ( !$er->valida_fecha($valor) ){
-           $this->errores[] = "Este fecha_creacion (".$valor.") no es valido";
+       if ( !$er->valida_fecha($valor) ){
+           //$this->errores[] = "Este fecha_creacion (".$valor.") no es valido";
        }
-*/
+
               
        $this->fecha_creacion = trim($valor);
        
@@ -222,7 +222,7 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
+      if ( !$er->valida_noVacio($valor) ){
            $this->errores[] = "Este conclusiones (".$valor.") no es valido";
        }
 

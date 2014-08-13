@@ -9,7 +9,8 @@
       include ('../../controllers/ArticuloController.php');
       include ('../../libs/Er.php');
 	  include ('../layouts/header.php');
-    $articuloC = new  ArticuloController();
+  
+  $articuloC = new  ArticuloController();
   if(isset($_POST['nombre'])){
   
   $articuloC->insertaArticulo($_POST,$_FILES);
@@ -18,6 +19,7 @@
  
 ?>
   
+
   <!--<body id="page-top" class="index">-->
 
     <!-- Header -->
@@ -28,7 +30,7 @@
         </div>
     </header>
 
-  <div class="container theme-showcase" role="main"  style="background:url(../img/fondo.jpg)">
+	<section  class="bg-light-gray">
   
      
     	<div class="row">
@@ -39,106 +41,134 @@
             </center></div>
           </div>
 		<div class="row">
-        	<div class="col-md-2">
+        	<div class="col-md-3">
             	
         	</div>
-            <div class="col-md-8">
-						    <form class="registro" method="POST" enctype="multipart/form-data">
+            <div class="col-md-6">
+			
+						    <form class="form-horizontal" method="POST"  id="registerForm" enctype="multipart/form-data">
 
 <!-- Nombre -->
 							  <div class="form-group" >
-								<label for="nombre">Nombre</label>
-								<input type="text" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre de la revista" />
-							  </div>
+								<label class="col-lg-2 control-label" for="nombre">Nombre</label>
+								<div class="col-lg-9">
+								<input type="text" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre de la revista" value="<?php echo $articuloC->get_nombre(); ?>"/>
+							   </div> </div>
 							  
 <!-- Resumen -->
 							  <div class="form-group" >
-								  <label for="resumen">Resumen</label>
-								  <div id='edit' name = "resumen" style="  background-color:rgba(255,255,255,1);">  </div>	
-                                </div>	
+								  <label class="col-lg-2 control-label" for="resumen">Resumen</label>
+								  <div class="col-lg-9">
+								  <textarea  class="form-control" id='resumen' name = "resumen" style="  background-color:rgba(255,255,255,1);" >  </textarea>	
+                                </div>	  </div>	
 													
 <!-- Abstracion -->								
 								<div class="form-group" >
-								  <label for="abstrac">Abstracci&oacute;n</label>
-								  <div id='edit1' name = "abstrac" style="  background-color:rgba(255,255,255,1);">  </div>	
-                                </div>	
-
+								  <label class="col-lg-2 control-label"for="abstrac">Abstracci&oacute;n</label>
+								  <div class="col-lg-9">
+								  <textarea id='abstrac' name = "abstrac" style="  background-color:rgba(255,255,255,1);">  </textarea>	
+                                </div>	 
+								</div>
+								
 <!-- Introduccion -->		
 								<div class="form-group" >
-								  <label for="introduccion">Introducci&oacute;n</label>
-								  <div id='edit2' name = "introduccion" style="  background-color:rgba(255,255,255,1);">  </div>	
+								  <label class="col-lg-2 control-label" for="introduccion">Introducci&oacute;n</label>
+								  <div class="col-lg-9">
+								  <textarea id='introduccion' name = "introduccion" style="  background-color:rgba(255,255,255,1);">  </textarea>	
                                 </div>	
+								</div>
 
+								
 <!-- Metodologia -->
 								<div class="form-group" >
-								  <label for="metodologia">Metodologia</label>
-								  <div id='edit3' name = "metodologia"style="  background-color:rgba(255,255,255,1);">  </div>	
+								  <label class="col-lg-2 control-label" for="metodologia">Metodologia</label>
+								  <div class="col-lg-9">
+								  <textarea id='metodologia' name = "metodologia"style="  background-color:rgba(255,255,255,1);">  </textarea>	
                                 </div>	
+								</div>
 
 <!-- Contenido -->			
 								<div class="form-group" >
-								 <label for="contenido">Contenido</label>
-								  <div id='edit4' name = "contenido"style="  background-color:rgba(255,255,255,1);">  </div>	
-                                </div>	
+								 <label class="col-lg-2 control-label" for="contenido">Contenido</label>
+								 <div class="col-lg-9">
+								  <textarea id='contenido' name = "contenido"style="  background-color:rgba(255,255,255,1);">  </textarea>
+								  
+                                </div>
+								</div>
+								
 							  
 <!-- Fecha -->
 								
 							  <div class="form-group">
-							      <label for="fecha_creacion">Fecha de creaci&oacute;n</label>
+							      <label class="col-lg-2 control-label" for="fecha_creacion">Fecha de creaci&oacute;n</label>
+								  <div class="col-lg-9">
                                       <input type="text" class="form-control" id="dp1" name="fecha_creacion" value="<?php echo $articuloC->get_fecha_creacion(); ?>" />
 
+							  </div>
 							  </div>
 
 <!-- Archivo -->			  
 							  <div class="form-group">
-								<label for="archiv_pdf">archivo pdf</label>
+								<label class="col-lg-2 control-label" for="archiv_pdf">archivo pdf</label>
+								<div class="col-lg-9">
 								<input type="file" id="archivo_pdf" name = "archivo_pdf"/>
 								<p class="help-block">Carga un archivo pdf</p>
+							  </div>
 							  </div>
 
 <!-- Status -->		
 							  <div class="form-group">
-							    <label for="id_status">id de status</label>
-								<select class="form-control" id="id_status" name = "id_status" placeholder="elige id de status">
-								        <option value=""></option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										
-								</select>
+							    <label class="col-lg-2 control-label"for="id_status">id de status</label>
+								<div class="col-lg-9">
+								 <?php echo $articuloC->getDropDown('id_status','status','status','id_status','id_status'); ?>
+							  </div>
 							  </div>
 							  
 <!-- Conclusiones -->		  
 							  <div class="form-group" >
-								  <label for="conclusiones">Conclusiones</label>
-								  <div id='edit5' name = "conclusiones" style="  background-color:rgba(255,255,255,1);">  </div>	
+								  <label class="col-lg-2 control-label" for="conclusiones">Conclusiones</label>
+								  <div class="col-lg-9">
+								  <textarea id='conclusiones' name = "conclusiones" style="  background-color:rgba(255,255,255,1);">  </textarea>	
                                 </div>	
+								</div>
 
 <!-- Agradecimientos -->
 							  <div class="form-group" >
-								<label for="agradecimientos">Agradecimientos</label>
+								<label class="col-lg-2 control-label" for="agradecimientos">Agradecimientos</label>
+								<div class="col-lg-9">
 								<input type="text" class="form-control" id="agradecimientos" name = "agradecimientos" placeholder="Ingresa agradecimiento"/>
+							  </div>
 							  </div>
 
 <!-- Referencia -->
 							  <div class="form-group" >
-								<label for="referencias">Referencias</label>
+								<label class="col-lg-2 control-label" for="referencias">Referencias</label>
+								<div class="col-lg-9">
 								<input type="text" class="form-control" id="referencias" name = "referencias" placeholder="Ingresa referencia"/>
 							  </div>
+							  </div>
+							  
+
+
 							  
 		  
 							  <div>
-							  <button type="submit" class="btn btn-default">Enviar</button>
+							  <center><button type="submit" class="btn btn-default">Enviar</button><center>
+							  
+							   
 							  </div>
+							  
+							  
 							  
 							</form>
 							
 				
         	</div>
-			<div class="col-md-2">
+			<div class="col-md-3">
             		
         	</div>
+			<?php echo $articuloC->show_grid(); ?>
         </div>
+</section>
         
 	<?php include ('../layouts/footer.php'); ?>

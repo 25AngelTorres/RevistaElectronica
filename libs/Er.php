@@ -158,6 +158,16 @@ class Er {
 		
 
 
+	//noVacio	
+	public function valida_noVacio($valor){ 
+		$exp_reg="/^(<p><br><\/p>)/"; 
+		if (preg_match($exp_reg, $valor)) {
+			 return false;
+		} else { 
+			 return true;
+		} 
+	
+	}
 }
 
 ?>    

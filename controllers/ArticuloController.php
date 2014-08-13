@@ -13,6 +13,8 @@
   	  		print_r($datos);
 			print_r($archivo);*/
 			
+
+			
 	  		//echo "</pre>";
 			//$articulo= new Articulo();
 		    $this->set_nombre($datos['nombre']);

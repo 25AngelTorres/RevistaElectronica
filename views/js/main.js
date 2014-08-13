@@ -54,13 +54,18 @@ $(document).ready(function() {
 	});
 
 /* TeaxtArea*/
-  $('#edit').editable({inlineMode: false, theme: 'dark'})
-  $('#edit1').editable({inlineMode: false, theme: 'dark'})
-  $('#edit2').editable({inlineMode: false, theme: 'dark'})
-  $('#edit3').editable({inlineMode: false, theme: 'dark'})
+  $('#resumen').editable({inlineMode: false, theme: 'dark'})
+  $('#abstrac').editable({inlineMode: false, theme: 'dark'})
+  $('#introduccion').editable({inlineMode: false, theme: 'dark'})
+  $('#metodologia').editable({inlineMode: false, theme: 'dark'})
   $('#directorio').editable({inlineMode: false, theme: 'dark'})
-  $('#edit5').editable({inlineMode: false, theme: 'dark'})
-  $('#edit6').editable({inlineMode: false, theme: 'dark'})
+  $('#editorial').editable({inlineMode: false, theme: 'dark'})
+  $('#contenido').editable({inlineMode: false, theme: 'dark'})
+  $('#conclusiones').editable({inlineMode: false, theme: 'dark'})
+  
+  
+  
+  
 
 
 /*--Esto es para el validator*/
@@ -216,7 +221,16 @@ $(document).ready(function() {
                     }
                   }
                 },
-                resumen: {
+				
+				 resumen: {
+                validators: {
+                    notEmpty: {
+                        message: 'The first name is required'
+                    }
+                }
+            },
+				
+                resumedsdsn: {
                   message: 'El nombre no es valido',
                   validators: {
                       notEmpty: {

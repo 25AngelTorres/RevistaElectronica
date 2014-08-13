@@ -3,8 +3,7 @@
 //VISTA PRIVADA
   include ('../../libs/security.php');
   include ('../layouts/header.php');  
-
-  include ('../../libs/adodb5/adodb-pager.inc.php');
+include ('../../libs/adodb5/adodb-pager.inc.php');
   include ('../../libs/adodb5/adodb.inc.php');
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
@@ -131,7 +130,7 @@ $RevistaC = new RevistaController();
 								   <div class='col-sm-6'>
 								   <textarea id='directorio' name="directorio" style="background-color:rgba(255,255,255,1);">  
 
-                   </textarea>
+                                   </textarea>
                                 
                   </div>	
 						</div>
@@ -142,7 +141,7 @@ $RevistaC = new RevistaController();
 						 <div class="form-group" >
 								  <label for="editorial" class="col-sm-3 control-label">Editorial de la revista</label>
 								   <div class='col-sm-6'>
-								  <textarea id='edit5' name = "editorial" style="  background-color:rgba(255,255,255,1);">  </textarea>	
+								  <textarea id='editorial' name = "editorial" style="  background-color:rgba(255,255,255,1);">  </textarea>	
                                 </div>	
 								</div>
 
@@ -162,7 +161,10 @@ $RevistaC = new RevistaController();
                 <div class="col-md-12">
                   <div class="form-group">
                     <div class="col-sm-12">
-                      <input type="submit" value="Enviar"  />
+                      
+							  <button type="submit" class="btn btn-default">Enviar</button>
+							
+					  
                     </div>
                   </div>
                 

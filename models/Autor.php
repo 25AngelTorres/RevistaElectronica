@@ -75,7 +75,7 @@ class Autor extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
+       if ( !$er->valida_email($valor) ){
            $this->errores[] = "Este email (".$valor.") no es valido";
        }
 

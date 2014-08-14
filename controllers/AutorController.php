@@ -1,34 +1,58 @@
 <?php
-	class AutorController {
+/*
+Contine las clases 
+*/
+
+	class AutorController extends Autor {
 		
+		//Instancia de la clase Autor----No necesario para todos los controladores
 		public $muestra_errores = false;
-		
+		public $muestra_exito = false;
 		function __construct(){
-			
+			 parent::Autor();
 		}
-		
-		public function insertaAutor($datos){
-			echo "<pre>datos:";
-  	  		print_r($datos);
-	  		echo "</pre>";
-			$autor= new Autor();
-		    $autor->set_nombre($datos['nombre']);
-			$autor->set_apellidos($datos['apellidos']);
-			$autor->set_email($datos['email']);
-			
-			if(count($autor->errores)>0)
-			{
-				print_r($autor->errores);
-				die();
-			
+
+		//Funcion para insertar un equipo
+		public function inserta_autor($datos){
+			//Solo es para acegurarse que se estan enviando los archivos
+		    //echo "<pre>";
+		      //print_r($datos);
+		      //echo   'Desde Controller';
+
+		    //echo "</pre>";
+			//Conexion con Equipo el cual continene Modelo y Conexion
+			//$autor=new Autor();
+
+			$this->set_nombre($datos['nombre']);
+			$this->set_apellidos($datos['apellidos']);
+			$this->set_email($datos['email']);
+
+			//Verificar si existen errores
+			if(count ($this->errores)>0){
+				$this->muestra_errores=true;
+				/*print_r($autor->errores);
+				die();*/
 			}
-			
-			
-			$autor->inserta($autor->get_atributos());
-			
+			else{
+				$this->muestra_exito=true;
+				//Insertar en la Base de datos
+				$this->inserta($this->get_atributos());					
+			}
 		}
-		
-		public function validaUsuario($datos){
+
+		public function errores(){
+			if ($this->muestra_errores) {
+				echo '<div class="alert alert-danger">';
+                	foreach ($this->errores as $value) {
+                  	echo "<p>".$value."</p>";
+                	}  
+            	echo '</div>';
+			}
+			if ($this->muestra_exito) {
+				echo '<div class="alert alert-success" role="alert"><h4>Insercion Correcta</h4></div>';
+			}
+		}
+		/*public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();
         	if(count($rows) > 0){
@@ -44,7 +68,6 @@
 	     	}
 
 		}
-
 		public function iniciarSesion($rol,$email){
 			$_SESSION['user'] = $rol;
 			$_SESSION['email'] = $email;
@@ -54,9 +77,6 @@
 		public function cerrarSesion(){
 			session_destroy();
 			header("Location: inicio.php");
-		}
-
+		}*/
 	}
-
-
 ?>

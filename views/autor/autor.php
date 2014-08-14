@@ -15,8 +15,8 @@
 	  $autorC = new  AutorController();
       if(isset($_POST['nombre'])){
       
-	  $autorC->insertaAutor($_POST);
-      $autorC->error();
+	  $autorC->inserta_autor($_POST);
+      
   
 
   }
@@ -48,6 +48,7 @@
               </center>
             </div>
           </div>
+          <?PHP $autorC->errores(); ?>
 		<div class="row">
         	<div class="col-md-3">
             	
@@ -57,19 +58,19 @@
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="nombre">Nombre</label>
 								<div class="col-lg-9">
-								<input type="continente" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre del autor" >
+								<input type="continente" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre del autor" value="<?php echo $autorC->get_nombre(); ?>"/>
 							  </div>
 							  </div>
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="apellidos">Apellidos</label>
 								<div class="col-lg-9">
-								<input type="continente" class="form-control" id="apellidos" name = "apellidos" placeholder="Ingresa apellidos del autor" >
+								<input type="continente" class="form-control" id="apellidos" name = "apellidos" placeholder="Ingresa apellidos del autor" value="<?php echo $autorC->get_apellidos(); ?>"/>
 							  </div>
 							  </div>
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="email">Email</label>
 								<div class="col-lg-9">
-								<input type="continente" class="form-control" id="email" name = "email" placeholder="Ingresa email" >
+								<input type="continente" class="form-control" id="email" name = "email" placeholder="Ingresa email" value="<?php echo $autorC->get_email(); ?>"/>
 							  </div>
 							  </div>
 							  <div>
@@ -83,6 +84,17 @@
             		
         	</div>
         </div>
+
+
+  <div class="row">
+        <div class="col-md-12">
+                
+                <?php echo $autorC->show_grid(); ?>
+                
+                </div>
+              </div>
+
+
 		
       </div>
     </section>

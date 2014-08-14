@@ -4,7 +4,7 @@ class Er {
 
 //Email    
 	public function valida_email($valor){
-		$exp_reg = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
+		$exp_reg = '/^\w+([\.-]?\w+)*@[a-zA-Z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
 		if (preg_match($exp_reg, $valor)) {
 			 return true;
 		} else { 

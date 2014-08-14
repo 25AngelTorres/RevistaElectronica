@@ -1,16 +1,18 @@
 <!-- Formulario de Revista-->
 <?php 
 //VISTA PRIVADA
+
   include ('../../libs/security.php');
-  include ('../layouts/header.php');  
-include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../layouts/url.php');
+  include ('../../libs/adodb5/adodb-pager.inc.php');
   include ('../../libs/adodb5/adodb.inc.php');
   include ('../../models/Conexion.php');
   include ('../../models/Modelo.php');
   include ('../../models/Revista.php');
   include ('../../controllers/RevistaController.php');
   include ('../../libs/Er.php');
-  
+
+  include ('../layouts/header.php');    
   
   
 //Inicializar el controlador
@@ -128,9 +130,9 @@ $RevistaC = new RevistaController();
 						<div class="form-group" >
 								 <label for="directorio" class="col-sm-3 control-label" >Directorio de la revista</label>
 								   <div class='col-sm-6'>
-								   <textarea id='directorio' name="directorio" style="background-color:rgba(255,255,255,1);">  
-
-                                   </textarea>
+								  <textarea id='directorio' name="directorio" style="background-color:rgba(255,255,255,1);">  
+                      <?php echo $RevistaC->get_directorio(); ?>
+                  </textarea>
                                 
                   </div>	
 						</div>
@@ -141,7 +143,9 @@ $RevistaC = new RevistaController();
 						 <div class="form-group" >
 								  <label for="editorial" class="col-sm-3 control-label">Editorial de la revista</label>
 								   <div class='col-sm-6'>
-								  <textarea id='editorial' name = "editorial" style="  background-color:rgba(255,255,255,1);">  </textarea>	
+								  <textarea id='editorial' name = "editorial" style="  background-color:rgba(255,255,255,1);">
+                      <?php echo $RevistaC->get_directorio(); ?>
+                  </textarea>	
                                 </div>	
 								</div>
 

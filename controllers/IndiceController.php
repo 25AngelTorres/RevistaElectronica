@@ -8,6 +8,12 @@ Contine las clases
 		//Instancia de la clase indice----No necesario para todos los controladores
 		public $muestra_errores = false;
 		public $muestra_exito = false;
+
+		public $sql_indices = "
+			SELECT *, r.nombre  FROM indice i
+			JOIN revista r ON r.id_revista = i.id_revista
+		";
+
 		function __construct(){
 			 parent::Indice();
 		}

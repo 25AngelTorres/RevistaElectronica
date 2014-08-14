@@ -28,9 +28,9 @@ class ADODB_Pager {
 	var $gridAttributes = "class='table' border=1";
 	
 	// Localize text strings here
-	var $first = '<code>xxx</code>';
-	var $prev = '<code>&lt;&lt;</code>';
-	var $next = '<code>yyyy</code>';
+	var $first = '<code>first</code>';
+	var $prev = '<code>prev</code>';
+	var $next = '<code>next</code>';
 	var $last = '<code>>|</code>';
 	var $moreLinks = '...';
 	var $startLinks = '...';
@@ -182,6 +182,7 @@ class ADODB_Pager {
 		include_once(ADODB_DIR.'/tohtml.inc.php');
 		ob_start();
 		$gSQLBlockRows = $this->rows;
+
 		rs2html($this->rs,$this->gridAttributes,$this->gridHeader,$this->htmlSpecialChars);
 		$s = ob_get_contents();
 		ob_end_clean();

@@ -4,6 +4,7 @@
  */
 if ("undefined" == typeof jQuery) throw new Error("Froala requires jQuery");
 ! function(a) {
+  var baseUrl = 'http://localhost/RevistaElectronica/';
   "use strict";
   var b = function(c, d) {
     this.options = a.extend({}, b.DEFAULTS, a(c).data(), "object" == typeof d && d), this.browser = b.browser(), this.disabledList = [], this._id = ++b.count, this.init(c), this.callback("initialized", [], !1)
@@ -41,8 +42,8 @@ if ("undefined" == typeof jQuery) throw new Error("Froala requires jQuery");
     imageUploadParams: {},
     imageUploadParam: "file",
     imageUploadToS3: !1,
-    imageUploadURL: "http://localhost:8080/RevistaElectronica/views/upload/upload.php",
-    imagesLoadURL: "http://localhost:8080/RevistaElectronica/views/upload",
+    imageUploadURL: baseUrl+"views/upload/upload.php",
+    imagesLoadURL: baseUrl+"views/upload",
     imagesLoadParams: {},
     inlineMode: !0,
     initOnClick: !1,
@@ -55,7 +56,7 @@ if ("undefined" == typeof jQuery) throw new Error("Froala requires jQuery");
     minHeight: "auto",
     noFollow: !0,
     paragraphy: !0,
-    placeholder: "Type something",
+    placeholder: "",
     plainPaste: !1,
     preloaderSrc: "",
     saveURL: null,

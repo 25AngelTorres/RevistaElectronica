@@ -1,6 +1,7 @@
 <?php 
 //VISTA PRIVADA
       include ('../../libs/security.php');
+      include ('../layouts/url.php');
       include ('../../libs/adodb5/adodb-pager.inc.php');
       include ('../../libs/adodb5/adodb.inc.php');
       include ('../../models/Conexion.php');
@@ -41,10 +42,8 @@
             </center></div>
           </div>
 		<div class="row">
-        	<div class="col-md-3">
-            	
-        	</div>
-            <div class="col-md-6">
+        	
+            <div class="col-md-10 col-md-offset-1">
 			
 						    <form class="form-horizontal" method="POST"  id="registerForm" enctype="multipart/form-data">
 
@@ -83,7 +82,7 @@
 								<div class="form-group" >
 								  <label class="col-lg-2 control-label" for="metodologia">Metodologia</label>
 								  <div class="col-lg-9">
-								  <textarea id='metodologia' name = "metodologia"style="  background-color:rgba(255,255,255,1);">  </textarea>	
+								  <textarea id='metodologia' cols="1000000" name="metodologia"style="  background-color:rgba(255,255,255,1);">  </textarea>	
                                 </div>	
 								</div>
 
@@ -164,9 +163,7 @@
 							
 				
         	</div>
-			<div class="col-md-3">
-            		
-        	</div>
+		
 			<?php echo $articuloC->show_grid(); ?>
         </div>
 </section>

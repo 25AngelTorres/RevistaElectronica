@@ -2,7 +2,7 @@
 <?php 
 //VISTA PRIVADA
   include ('../../libs/security.php');
-
+include ('../layouts/url.php');
   include ('../../libs/adodb5/adodb-pager.inc.php');
   include ('../../libs/adodb5/adodb.inc.php');
   include ('../../models/Conexion.php');
@@ -80,7 +80,7 @@
                           <input type="submit" value="Enviar"  />
                         </div>
               </div>
-              <button type="button" class="btn btn-default"><a href="../subindice/form_subindice.php">Agregar subindice</a></button>
+                <a href="../subindice/form_subindice.php" class="btn btn-default">Agregar subindice</a>
             </div>
           </div>
                     </form>
@@ -88,9 +88,25 @@
       
     		  <div class="row">
             <div class="col-md-12">
-                    
-                    <?php echo $IndiceC->show_grid(); ?>
-                    
+                    <table class="table">
+                    <?php 
+
+                      $data = $IndiceC->consulta_sql($IndiceC->sql_indices)->getArray(); 
+                      foreach ($data as $value) {
+                        echo "<tr>";
+                          echo "<td>".$value['nombre']."</td>";
+                          //echo "<td>".$value['id_indice']."</td>";
+                          
+                          echo "<td>".$value['numero']."</td>";
+                          echo "<td>".$value['titulo']."</td>";
+                          
+                          echo "<td><a class='btn btn-default' href='".BASEURL."/views/subindice/form_subindice.php?id_indice=".$value['id_indice']."' > agregar articulos.</a></td>";
+                          
+
+                        echo "</tr>";
+                      }
+                    ?>
+                    </table>
             </div>
           </div>
   </div> <!-- container -->

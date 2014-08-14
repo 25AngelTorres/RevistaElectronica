@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include ('../layouts/url.php');
   include ('../layouts/header.php');
   
 ?>

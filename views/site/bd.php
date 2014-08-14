@@ -1,5 +1,6 @@
 <?php 
     include ('../../libs/security.php');
+    include ('../layouts/url.php');
     include ('../layouts/header.php');
   
 ?>

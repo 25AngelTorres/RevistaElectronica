@@ -10,9 +10,9 @@ Contine las clases
 		public $muestra_exito = false;
 		//Consultas para header
 			public $header1='SELECT i.titulo, r.nombre
-							FROM indice_articulo ia
-							JOIN indice i ON i.id_indice = ia.id_indice
-							JOIN revista r ON r.id_revista = i.id_revista';
+							FROM indice i
+							JOIN revista r ON r.id_revista = i.id_revista
+							';
 		//
 
 		function __construct(){
@@ -62,9 +62,9 @@ Contine las clases
 		}
 
 		public function header($where){
-			$this->header1.=' where ia.id_indice="'.$where.'"';
-
-			$data = $this->consulta_sql($this->header1)->getArray();
+			$this->header1.=' where i.id_indice="'.$where.'"';
+			$query=$this->header1;
+			$data = $this->consulta_sql($query)->getArray();
 			/*echo '<pre>';
 			print_r($data);
 			echo '</pre>';*/

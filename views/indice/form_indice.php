@@ -90,16 +90,19 @@ include ('../layouts/url.php');
       
     		  <div class="row">
             <div class="col-md-12">
-                    <table class="table">
+                    <table class="table table-striped">
                     <?php 
 
                       $data = $IndiceC->consulta_sql($IndiceC->sql_indices)->getArray(); 
+                      
+                      /*print_r($data);
+                      die();*/
                       foreach ($data as $value) {
                         echo "<tr>";
                           echo "<td>".$value['nombre']."</td>";
                           //echo "<td>".$value['id_indice']."</td>";
                           
-                          echo "<td>".$value['numero']."</td>";
+                          echo "<td>".$value['indice_numero']."</td>";
                           echo "<td>".$value['titulo']."</td>";
                           
                           echo "<td><a class='btn btn-default' href='".BASEURL."/views/subindice/form_subindice.php?id_indice=".$value['id_indice']."' > agregar articulos.</a></td>";

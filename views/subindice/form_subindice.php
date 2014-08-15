@@ -15,7 +15,7 @@ include ('../layouts/url.php');
 
 //Inicializar el controlador
   $SubindiceC = new SubindiceController();
-  if(isset($_POST['id_indice']))  {
+  if(isset($_POST['numero']))  {
      /*echo "<pre>";
       print_r($_POST);
     echo "</pre>";
@@ -58,14 +58,14 @@ include ('../layouts/url.php');
                     <form role="form" id="registerForm" method="POST">
 <!-- id_indice --
     				  <div class="col-md-12">
-    					<div class="form-group">
+    					 <div class="form-group">
                         	<label for="id_indice" class="col-sm-8 control-label">Selecciona el indice al cual pertenece: </label>
                         	<div class="col-sm-4">
                                                           <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' --
                             	<?php echo $SubindiceC->getDropDown('id_indice','titulo','indice','id_indice','id_indice'); ?>
                         	</div>
-                      	</div>
-		              </div> -->
+               </div>
+		          </div>  -->
 
 <!-- id_articulo -->
     				  <div class="col-md-12">

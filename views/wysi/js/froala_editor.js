@@ -4,7 +4,9 @@
  */
 if ("undefined" == typeof jQuery) throw new Error("Froala requires jQuery");
 ! function(a) {
-  var baseUrl = 'http://localhost/RevistaElectronica/';
+  /**/
+  var baseUrl = 'http://localhost:8080/RevistaElectronica/';
+  /**/
   "use strict";
   var b = function(c, d) {
     this.options = a.extend({}, b.DEFAULTS, a(c).data(), "object" == typeof d && d), this.browser = b.browser(), this.disabledList = [], this._id = ++b.count, this.init(c), this.callback("initialized", [], !1)

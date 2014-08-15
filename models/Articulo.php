@@ -188,7 +188,7 @@ class Articulo extends Modelo{
         if ( !$er->valida_pdf_type($valor['type']) ){
             $this->errores[] = 'Formato del archivo no es valido ('.$valor["type"].').';
         }
-        if ( $valor['size']>10000000){
+        if ( $valor['size']>102400000){
             $this->errores[] = 'Tamaño de imagen ('.$valor["size"].'). Sobrepasa el tamaño maximo';
         }
         //trim simplemente quita espacios al principio y final de la cadena

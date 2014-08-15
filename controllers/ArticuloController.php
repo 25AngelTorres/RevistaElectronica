@@ -2,7 +2,7 @@
 	class ArticuloController  extends Articulo{
 		
 		public $muestra_errores = false;
-		
+		public $muestra_exito = false;
 		function __construct(){
 		parent::Articulo();
 			
@@ -11,11 +11,8 @@
 		public function insertaArticulo($datos,$archivo){
 			/*echo "<pre>datos:";
   	  		print_r($datos);
-			print_r($archivo);*/
-			
-
-			
-	  		//echo "</pre>";
+			print_r($archivo);			
+	  		echo "</pre>";*/
 			//$articulo= new Articulo();
 		    $this->set_nombre($datos['nombre']);
 			$this->set_resumen($datos['resumen']);
@@ -24,7 +21,10 @@
 			$this->set_metodologia($datos['metodologia']);
 			$this->set_contenido($datos['contenido']);
 			$this->set_fecha_creacion($datos['fecha_creacion']);
-			$this->set_archivo_pdf($archivo['archivo_pdf']);
+			/*Archivo pdf opcional*/
+			if($archivo['archivo_pdf']['name']!=''){
+				$this->set_archivo_pdf($archivo['archivo_pdf']);
+			}
 			$this->set_id_status($datos['id_status']);
 			$this->set_conclusiones($datos['conclusiones']);
 			$this->set_agradecimientos($datos['agradecimientos']);
@@ -42,18 +42,35 @@
 					$this->muestra_errores = true;
 			}
 			else{
+				$this->muestra_exito=true;
 			
 				move_uploaded_file($archivo['archivo_pdf']['tmp_name'],"../upload/".$archivo['archivo_pdf']['name']);
 
 				$this->inserta($this->get_atributos());
 			}
 			
-		
-			
 		}
-		
-		
+			public function errores(){
+				if ($this->muestra_errores) {
+					echo '<div class="alert alert-danger">';
+	                	foreach ($this->errores as $value) {
+	                  	echo "<p>".$value."</p>";
+	                	}  
+	            	echo '</div>';
+				}
+				if ($this->muestra_exito) {
+					echo '<div class="alert alert-success" role="alert"><h4>Insercion Correcta</h4></div>';
+				}
+			}
+
+
 			
+	}
+
+		
+		
+		
+/*			
 		public function error() {
 		 
 			  if($this->muestra_errores)
@@ -99,7 +116,7 @@
 			header("Location: inicio.php");
 		}
 
-	}
+	}*/
 
 
 ?>

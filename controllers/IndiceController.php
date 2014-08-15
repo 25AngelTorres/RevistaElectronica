@@ -10,7 +10,7 @@ Contine las clases
 		public $muestra_exito = false;
 
 		public $sql_indices = "
-			SELECT *, r.nombre  FROM indice i
+			SELECT *, r.nombre, i.titulo  FROM indice i
 			JOIN revista r ON r.id_revista = i.id_revista
 		";
 

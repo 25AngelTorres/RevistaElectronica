@@ -11,7 +11,7 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Departamento de ingenieria industrial</div>
+                <div class="intro-lead-in">Departamento de ingenier&iacute;a industrial</div>
                 <div class="intro-heading">Revista electr&oacute;nica</div>
                 <a href="#portfolio" class="page-scroll btn-xl">Mas............</a>
             </div>

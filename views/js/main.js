@@ -1,11 +1,11 @@
 
 $(document).ready(function() {
 
-  /* Ocultar Formularios */
+  /* Ocultar Formularios 
     $('#opc_inser_bd').hide();
     
 
-/* Mostrar tablas a insertar */
+/* Mostrar tablas a insertar 
     $('#btn_opc_inser_bd').click(
       function(){
         $('#opc_inser_bd').show('slow');
@@ -25,6 +25,7 @@ $(document).ready(function() {
         $('#form_tipo_jugador').hide();
       }
     );
+    */
 
 
 	$(".fancybox-thumb").fancybox({

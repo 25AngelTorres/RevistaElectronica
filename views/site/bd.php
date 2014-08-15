@@ -23,15 +23,15 @@
                             <h1>Administrar Base de datos <small>Insertar</small></h1>
                         </div>
 
-                        <p class="intro-text">Insertar dentro de la base de datos nueva información. Da clic en el &iacute;cono de abajo para ver las tablas donde puedes insertar.</p>
+                        <p class="intro-text">Para insertar dentro de la base de datos, elije la tabla a la cual quieres agregar nueva informaci&oacute;n.</p>
 
 
-                        <div class="page-scroll"  id="btn_opc_inser_bd">
+                        <!--<div class="page-scroll"  id="btn_opc_inser_bd">
                             <a class="btn btn-circle">
                                 <i class="fa fa-angle-double-down animated"></i>
                           
                             </a>
-                        </div>
+                        </div>-->
 
                     </div>
                 </div>

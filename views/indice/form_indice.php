@@ -51,21 +51,24 @@ include ('../layouts/url.php');
           ?>
     		  <div class="row">
                     <form role="form" id="registerForm" method="POST">
+<!-- Titulo -->
     				  <div class="col-md-6">
                       <div class="form-group">
                         <label for="nombre">Titulo</label>
                         <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $IndiceC->get_titulo(); ?>">
                       </div>
     				  </div>
+<!-- Numero -->              
     				  <div class="col-md-6">
     				  <div class="form-group">
                         <label for="numero">N&uacute;mero</label>
                         <input type="text" class="form-control" id="numero"  name="numero" value="<?php echo $IndiceC->get_numero(); ?>">
                       </div>
     				  </div>
+<!-- Revista -->
     				  <div class="col-md-12">
     					<div class="form-group">
-                        <label for="id_revista" class="col-sm-3 control-label">id_revista: </label>
+                        <label for="id_revista" class="col-sm-3 control-label">Revista: </label>
                         <div class="col-sm-6">
                                                           <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' -->
                             <?php echo $IndiceC->getDropDown('id_revista','nombre','revista','id_revista','id_revista'); ?>
@@ -77,10 +80,9 @@ include ('../layouts/url.php');
             <div class=col-md-12>
               <div class="form-group">
                         <div class="col-sm-12">
-                          <input type="submit" value="Enviar"  />
+                          <input type="submit" value="Guardar"  />
                         </div>
               </div>
-                <a href="../subindice/form_subindice.php" class="btn btn-default">Agregar subindice</a>
             </div>
           </div>
                     </form>
@@ -105,6 +107,8 @@ include ('../layouts/url.php');
 
                         echo "</tr>";
                       }
+
+
                     ?>
                     </table>
             </div>

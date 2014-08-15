@@ -1,3 +1,3 @@
 <?php 
-define('BASEURL','http://localhost/RevistaElectronica');
+define('BASEURL','http://localhost:8080/RevistaElectronica');
 ?>

@@ -15,7 +15,7 @@
   if(isset($_POST['nombre'])){
   
   $articuloC->insertaArticulo($_POST,$_FILES);
-    $articuloC->error();
+
   }
  
 ?>
@@ -41,6 +41,14 @@
               </div>
             </center></div>
           </div>
+		
+<!-- Errores -->
+		<div class="row">
+            <div class="col-md-10 col-md-offset-1">
+				<?PHP $articuloC->errores(); ?>
+			</div>
+		</div>
+
 		<div class="row">
         	
             <div class="col-md-10 col-md-offset-1">
@@ -58,14 +66,18 @@
 							  <div class="form-group" >
 								  <label class="col-lg-2 control-label" for="resumen">Resumen</label>
 								  <div class="col-lg-9">
-								  <textarea  class="form-control" id='resumen' name = "resumen" style="  background-color:rgba(255,255,255,1);" >  </textarea>	
+								  <textarea  class="form-control" id='resumen' name = "resumen" style="  background-color:rgba(255,255,255,1);" >
+								  	<?php echo $articuloC->get_resumen(); ?>
+								  </textarea>	
                                 </div>	  </div>	
 													
 <!-- Abstracion -->								
 								<div class="form-group" >
 								  <label class="col-lg-2 control-label"for="abstrac">Abstracci&oacute;n</label>
 								  <div class="col-lg-9">
-								  <textarea id='abstrac' name = "abstrac" style="  background-color:rgba(255,255,255,1);">  </textarea>	
+								  <textarea id='abstrac' name = "abstrac" style="  background-color:rgba(255,255,255,1);">
+								  	<?php echo $articuloC->get_abstrac(); ?>
+								  </textarea>	
                                 </div>	 
 								</div>
 								
@@ -73,7 +85,9 @@
 								<div class="form-group" >
 								  <label class="col-lg-2 control-label" for="introduccion">Introducci&oacute;n</label>
 								  <div class="col-lg-9">
-								  <textarea id='introduccion' name = "introduccion" style="  background-color:rgba(255,255,255,1);">  </textarea>	
+								  <textarea id='introduccion' name = "introduccion" style="  background-color:rgba(255,255,255,1);">
+								  	<?php echo $articuloC->get_introduccion(); ?>
+								  </textarea>	
                                 </div>	
 								</div>
 
@@ -82,7 +96,9 @@
 								<div class="form-group" >
 								  <label class="col-lg-2 control-label" for="metodologia">Metodologia</label>
 								  <div class="col-lg-9">
-								  <textarea id='metodologia' cols="1000000" name="metodologia"style="  background-color:rgba(255,255,255,1);">  </textarea>	
+								  <textarea id='metodologia' cols="1000000" name="metodologia"style="  background-color:rgba(255,255,255,1);">
+								  	<?php echo $articuloC->get_metodologia(); ?>
+								  </textarea>	
                                 </div>	
 								</div>
 
@@ -90,7 +106,9 @@
 								<div class="form-group" >
 								 <label class="col-lg-2 control-label" for="contenido">Contenido</label>
 								 <div class="col-lg-9">
-								  <textarea id='contenido' name = "contenido"style="  background-color:rgba(255,255,255,1);">  </textarea>
+								  <textarea id='contenido' name = "contenido"style="  background-color:rgba(255,255,255,1);">
+								  	<?php echo $articuloC->get_contenido(); ?>
+								  </textarea>
 								  
                                 </div>
 								</div>
@@ -117,7 +135,7 @@
 
 <!-- Status -->		
 							  <div class="form-group">
-							    <label class="col-lg-2 control-label"for="id_status">id de status</label>
+							    <label class="col-lg-2 control-label"for="id_status">Status</label>
 								<div class="col-lg-9">
 								 <?php echo $articuloC->getDropDown('id_status','status','status','id_status','id_status'); ?>
 							  </div>
@@ -127,7 +145,9 @@
 							  <div class="form-group" >
 								  <label class="col-lg-2 control-label" for="conclusiones">Conclusiones</label>
 								  <div class="col-lg-9">
-								  <textarea id='conclusiones' name = "conclusiones" style="  background-color:rgba(255,255,255,1);">  </textarea>	
+								  <textarea id='conclusiones' name = "conclusiones" style="  background-color:rgba(255,255,255,1);">
+								  	<?php echo $articuloC->get_conclusiones(); ?>
+								  </textarea>	
                                 </div>	
 								</div>
 

@@ -186,7 +186,8 @@
         </div>
 		
 		<div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-10 col-md-offset-1"  id="tabla">
+			         
                     <table class="table table-striped">
                     <?php 
 
@@ -197,38 +198,38 @@
                       die();*/
                      foreach ($data as $value) {
                           echo "<tr>";
-                          echo "<td>".$value['nombre']."</td>";
+                          echo "<td><strong>Nombre del articulo</strong> </br><center>".$value['nombre']."</center>";
 						  echo "</tr>";
 				        foreach ($data2 as $value) {
 						  echo "<tr>";
-                          echo "<td>".$value['nombre']."</td>";
+                          echo "<td><strong>Autor</strong></br><center>".$value['nombre']."</center></td>";
 						  echo "</tr>";
 						}
 						  echo "<tr>";
-						  echo "<td>".$value['resumen']."</td>";
+						  echo "<td><strong>Resumen</strong></br></br>".$value['resumen']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
-						  echo "<td>".$value['abstrac']."</td>";
+						  echo "<td><strong>Abstraci&oacute;n </strong></br></br>".$value['abstrac']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
-						  echo "<td>".$value['introduccion']."</td>";
+						  echo "<td><strong>Introducci&oacute;n</strong> </br></br>".$value['introduccion']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
-						  echo "<td>".$value['metodologia']."</td>";
+						  echo "<td><strong>metodologia </strong></br></br>".$value['metodologia']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
-						  echo "<td>".$value['contenido']."</td>";
+						  echo "<td><strong>Contenido</strong> </br></br>".$value['contenido']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
-						  echo "<td>".$value['conclusiones']."</td>";
+						  echo "<td><strong>Conclusiones</strong> </br></br>".$value['conclusiones']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
-						  echo "<td>".$value['agradecimientos']."</td>";
+						  echo "<td><strong>Agredecimentos </strong></br></br>".$value['agradecimientos']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
-						  echo "<td>".$value['referencias']."</td>";
+						  echo "<td><strong>Referencias </strong></br></br>".$value['referencias']."</td>";
 						  echo "</tr>";
-                          
+						  
                           
                           
 

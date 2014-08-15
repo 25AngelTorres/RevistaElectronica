@@ -59,6 +59,26 @@ Contine las clases
 				echo '<div class="alert alert-success" role="alert"><h4>Insercion Correcta</h4></div>';
 			}
 		}
+
+		public function tableSQL(){
+			$data = $this->consulta_sql($this->sql_indices)->getArray(); 
+                      
+                      /*print_r($data);
+                      die();*/
+                      foreach ($data as $value) {
+                        echo "<tr>";
+                          echo "<td>".$value['nombre']."</td>";
+                          //echo "<td>".$value['id_indice']."</td>";
+                          
+                          echo "<td>".$value['indice_numero']."</td>";
+                          echo "<td>".$value['titulo']."</td>";
+                          
+                          echo "<td><a class='btn btn-default' href='".BASEURL."/views/subindice/form_subindice.php?id_indice=".$value['id_indice']."' > agregar articulos.</a></td>";
+                          
+
+                        echo "</tr>";
+                      }
+		}
 		/*public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();

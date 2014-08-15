@@ -104,9 +104,9 @@ include ('../layouts/url.php');
           </div>
       
     		  <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" id="tabla">
                     
-                    <?php echo $SubindiceC->show_grid(); ?>
+                    <?php echo $SubindiceC->tableSQL(); ?>
                     
             </div>
           </div>

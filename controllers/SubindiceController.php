@@ -74,6 +74,42 @@ Contine las clases
                   Insertar articulos para el <u>indice '.$data['0']['titulo'].'</u> de la <u>revista '.$data['0']['nombre'].'</u>.</h4>
                   </div>';
 		}
+
+		public function tableSQL(){
+			$query = 'SELECT r.nombre AS Revista, i.titulo AS Indice, a.nombre AS Articulo, ia.numero AS Pagina
+						FROM indice_articulo ia
+						JOIN articulo a ON a.id_articulo = ia.id_articulo
+						JOIN indice i ON i.id_indice = ia.id_indice
+						JOIN revista r ON r.id_revista = i.id_revista
+						ORDER BY ia.numero
+						';
+			$data = $this->consulta_sql($query)->getArray();
+			/*echo '<pre>';
+			print_r($data);
+			echo '</pre>';*/
+			echo '<table class="table">';
+			echo '<tr>
+					<th>Revista</th>
+					<th>Indice</th>
+					<th>Articulo</th>
+					<th>P&aacute;gina</th>
+				</tr>';
+			foreach ($data as $value) {
+                        echo "<tr>";
+                          echo "<td>".$value['Revista']."</td>";
+                          //echo "<td>".$value['id_indice']."</td>";
+                          
+                          echo "<td>".$value['Indice']."</td>";
+                          echo "<td>".$value['Articulo']."</td>";
+                          echo "<td>".$value['Pagina']."</td>";
+                          
+                        echo "</tr>";
+                      }
+             echo '</table>';
+
+		}
+
+
 		/*public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();

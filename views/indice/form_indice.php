@@ -89,7 +89,7 @@ include ('../layouts/url.php');
           </div>
       
     		  <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" id="tabla">
                     <table class="table table-striped">
                     <?php 
 

@@ -81,7 +81,7 @@ include ('../layouts/url.php');
 <!-- numero -->
 					<div class="col-md-12">
     				  <div class="form-group">
-                        <label for="numero" class="col-sm-8 control-label"> N&uacute;mero:</label>
+                        <label for="numero" class="col-sm-8 control-label"> P&aacute;gina:</label>
                       	<div class="col-sm-4">
                         	<input type="text" class="form-control" id="numero"  name="numero" value="<?php echo $SubindiceC->get_numero(); ?>">
                     	</div>

@@ -21,7 +21,7 @@ include ('../layouts/url.php');
     echo "</pre>";
     die();*/
 
-    $SubindiceC->inserta_Subindice($_POST);
+    $SubindiceC->inserta_Subindice($_POST,$_GET['id_indice']);
   }
 
 ?>
@@ -40,9 +40,14 @@ include ('../layouts/url.php');
         <div class="container">
           <div class="row">
               <div class="col-md-12">
+                
+                <?php $SubindiceC->header($_GET['id_indice']); ?>
+      
+<!--
                 <div class="page-header">
                   <h1> <a href="../indice/form_indice.php"><span class="glyphicon glyphicon-th"></span></a> Sub&iacute;ndice <small>Insertar</small></h1>
                 </div>
+-->
               </div>
             </div>
 <!-- Errores -->
@@ -51,16 +56,16 @@ include ('../layouts/url.php');
           ?>
     		  <div class="row">
                     <form role="form" id="registerForm" method="POST">
-<!-- id_indice -->
+<!-- id_indice --
     				  <div class="col-md-12">
     					<div class="form-group">
                         	<label for="id_indice" class="col-sm-8 control-label">Selecciona el indice al cual pertenece: </label>
                         	<div class="col-sm-4">
-                                                          <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' -->
+                                                          <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' --
                             	<?php echo $SubindiceC->getDropDown('id_indice','titulo','indice','id_indice','id_indice'); ?>
                         	</div>
                       	</div>
-		              </div>
+		              </div> -->
 
 <!-- id_articulo -->
     				  <div class="col-md-12">
@@ -90,7 +95,7 @@ include ('../layouts/url.php');
             <div class=col-md-12>
               <div class="form-group">
                         <div class="col-sm-12">
-                          <input type="submit" value="Enviar"  />
+                          <input type="submit" value="Guardar"  />
                         </div>
               </div>
             </div>

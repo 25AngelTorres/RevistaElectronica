@@ -172,12 +172,10 @@
 							  
 		  
 							  <div>
-							  <center><button type="submit" class="btn btn-default">Enviar</button><center>
+							  <center><button type="submit" class="btn btn-default">Guardar</button><center>
 							  
 							   
-							  </div>
-							  
-							  
+							  </div>							  
 							  
 							</form>
 							

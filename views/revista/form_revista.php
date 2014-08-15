@@ -166,7 +166,7 @@ $RevistaC = new RevistaController();
                   <div class="form-group">
                     <div class="col-sm-12">
                       
-							  <button type="submit" class="btn btn-default">Enviar</button>
+							  <button type="submit" class="btn btn-default">Guardar</button>
 							
 					  
                     </div>

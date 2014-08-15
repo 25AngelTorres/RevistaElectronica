@@ -8,12 +8,19 @@ Contine las clases
 		//Instancia de la clase indice----No necesario para todos los controladores
 		public $muestra_errores = false;
 		public $muestra_exito = false;
+		//Consultas para header
+			public $header1='SELECT i.titulo, r.nombre
+							FROM indice_articulo ia
+							JOIN indice i ON i.id_indice = ia.id_indice
+							JOIN revista r ON r.id_revista = i.id_revista';
+		//
+
 		function __construct(){
 			 parent::Subindice();
 		}
 
 		//Funcion para insertar un equipo
-		public function inserta_Subindice($datos){
+		public function inserta_Subindice($datos,$idIndice){
 			//Solo es para acegurarse que se estan enviando los archivos
 		    /*echo "<pre>";
 		    print_r($datos);
@@ -24,7 +31,7 @@ Contine las clases
 			//Conexion con Equipo el cual continene Modelo y Conexion
 			//$autor=new Autor();
 
-			$this->set_id_indice($datos['id_indice']);
+			$this->set_id_indice($idIndice);
 			$this->set_numero($datos['numero']);
 			$this->set_id_articulo($datos['id_articulo']);
 
@@ -52,6 +59,20 @@ Contine las clases
 			if ($this->muestra_exito) {
 				echo '<div class="alert alert-success" role="alert"><h4>Insercion Correcta</h4></div>';
 			}
+		}
+
+		public function header($where){
+			$this->header1.=' where ia.id_indice="'.$where.'"';
+
+			$data = $this->consulta_sql($this->header1)->getArray();
+			/*echo '<pre>';
+			print_r($data);
+			echo '</pre>';*/
+			echo '
+				<div class="page-header">
+                  <h4> <a href="../indice/form_indice.php"><span class="glyphicon glyphicon-th"></span></a>
+                  Insertar articulos para el <u>indice '.$data['0']['titulo'].'</u> de la <u>revista '.$data['0']['nombre'].'</u>.</h4>
+                  </div>';
 		}
 		/*public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");

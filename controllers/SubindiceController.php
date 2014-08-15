@@ -70,8 +70,8 @@ Contine las clases
 			echo '</pre>';*/
 			echo '
 				<div class="page-header">
-                  <h4> <a href="../indice/form_indice.php"><span class="glyphicon glyphicon-th"></span></a>
-                  Insertar articulos para el <u>indice '.$data['0']['titulo'].'</u> de la <u>revista '.$data['0']['nombre'].'</u>.</h4>
+                  <h3> <a href="../indice/form_indice.php"><span class="glyphicon glyphicon-th"></span></a>
+                  Insertar art&iacute;culos para el &iacute;ndice <i>'.$data['0']['titulo'].'</i> de la revista <i>'.$data['0']['nombre'].'</i>.</h3>
                   </div>';
 		}
 

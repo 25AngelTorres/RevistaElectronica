@@ -99,14 +99,14 @@ $RevistaC = new RevistaController();
                       </div>
 <!-- Titulo -->
 						<div class="form-group">
-                        <label for="titulo" class="col-sm-3 control-label">Titulo de la revista</label>
+                        <label for="titulo" class="col-sm-3 control-label">T&iacute;tulo de la revista</label>
                         <div class='col-sm-6'>
                         <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $RevistaC->get_titulo(); ?>" />
                         </div>
                          </div>
 <!-- Subtitulo -->
 				<div class="form-group">
-                        <label for="subtitulo" class="col-sm-3 control-label">Subitulo de la revista</label>
+                        <label for="subtitulo" class="col-sm-3 control-label">Subt&iacute;tulo de la revista</label>
                   <div class='col-sm-6'>
                         <input type="text" class="form-control" id="subtitulo" name="subtitulo" value=" <?php echo $RevistaC->get_subtitulo(); ?>" />
                    </div>

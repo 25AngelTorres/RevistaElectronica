@@ -37,7 +37,7 @@
     	<div class="row">
             <div class="col-md-12"><center>
               <div class="page-header">
-                <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Articulos <small>Insertar</small></h1>
+                <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Art&iacute;culos <small>Insertar</small></h1>
               </div>
             </center></div>
           </div>
@@ -94,7 +94,7 @@
 								
 <!-- Metodologia -->
 								<div class="form-group" >
-								  <label class="col-lg-2 control-label" for="metodologia">Metodologia</label>
+								  <label class="col-lg-2 control-label" for="metodologia">Metodolog&iacute;a</label>
 								  <div class="col-lg-9">
 								  <textarea id='metodologia' cols="1000000" name="metodologia"style="  background-color:rgba(255,255,255,1);">
 								  	<?php echo $articuloC->get_metodologia(); ?>
@@ -135,7 +135,7 @@
 
 <!-- Status -->		
 							  <div class="form-group">
-							    <label class="col-lg-2 control-label"for="id_status">Status</label>
+							    <label class="col-lg-2 control-label"for="id_status">Estatus</label>
 								<div class="col-lg-9">
 								 <?php echo $articuloC->getDropDown('id_status','status','status','id_status','id_status'); ?>
 							  </div>
@@ -198,7 +198,7 @@
                       die();*/
                      foreach ($data as $value) {
                           echo "<tr>";
-                          echo "<td><strong>Nombre del articulo</strong> </br><center>".$value['nombre']."</center>";
+                          echo "<td><strong>Nombre del art&iacute;culo</strong> </br><center>".$value['nombre']."</center>";
 						  echo "</tr>";
 				        foreach ($data2 as $value) {
 						  echo "<tr>";
@@ -215,7 +215,7 @@
 						  echo "<td><strong>Introducci&oacute;n</strong> </br></br>".$value['introduccion']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
-						  echo "<td><strong>metodologia </strong></br></br>".$value['metodologia']."</td>";
+						  echo "<td><strong>Metodolog&iacute;a </strong></br></br>".$value['metodologia']."</td>";
 						  echo "</tr>";
 						  echo "<tr>";
 						  echo "<td><strong>Contenido</strong> </br></br>".$value['contenido']."</td>";

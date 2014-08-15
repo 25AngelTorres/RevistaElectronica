@@ -46,7 +46,7 @@
                             <div class="col-md-6">
                                 <div class="list-group">
                                     <a href="../articulo/articulo.php" class="list-group-item">Art&iacute;culo</a>
-                                    <a href="../indice/form_indice.php" class="list-group-item">Indice</a>
+                                    <a href="../indice/form_indice.php" class="list-group-item">&Iacute;ndice</a>
                                 </div>
                             </div>
                     </div>

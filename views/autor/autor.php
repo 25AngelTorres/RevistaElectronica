@@ -64,7 +64,7 @@
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="apellidos">Apellidos</label>
 								<div class="col-lg-9">
-								<input type="continente" class="form-control" id="apellidos" name = "apellidos" placeholder="Ingresa apellidos del autor" value="<?php echo $autorC->get_apellidos(); ?>"/>
+								<input type="continente" class="form-control" id="apellidos" name = "apellidos" placeholder="Ingresa apellidos del autor" />
 							  </div>
 							  </div>
 							  <div class="form-group" >

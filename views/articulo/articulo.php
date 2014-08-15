@@ -182,8 +182,64 @@
 				
         	</div>
 		
-			<?php echo $articuloC->show_grid(); ?>
+			
         </div>
+		
+		<div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                    <table class="table table-striped">
+                    <?php 
+
+                      $data = $articuloC->consulta_sql($articuloC->sql_articulos)->getArray(); 
+					  $data2 = $articuloC->consulta_sql($articuloC->sql_autor)->getArray(); 
+                      
+                      /*print_r($data);
+                      die();*/
+                     foreach ($data as $value) {
+                          echo "<tr>";
+                          echo "<td>".$value['nombre']."</td>";
+						  echo "</tr>";
+				        foreach ($data2 as $value) {
+						  echo "<tr>";
+                          echo "<td>".$value['nombre']."</td>";
+						  echo "</tr>";
+						}
+						  echo "<tr>";
+						  echo "<td>".$value['resumen']."</td>";
+						  echo "</tr>";
+						  echo "<tr>";
+						  echo "<td>".$value['abstrac']."</td>";
+						  echo "</tr>";
+						  echo "<tr>";
+						  echo "<td>".$value['introduccion']."</td>";
+						  echo "</tr>";
+						  echo "<tr>";
+						  echo "<td>".$value['metodologia']."</td>";
+						  echo "</tr>";
+						  echo "<tr>";
+						  echo "<td>".$value['contenido']."</td>";
+						  echo "</tr>";
+						  echo "<tr>";
+						  echo "<td>".$value['conclusiones']."</td>";
+						  echo "</tr>";
+						  echo "<tr>";
+						  echo "<td>".$value['agradecimientos']."</td>";
+						  echo "</tr>";
+						  echo "<tr>";
+						  echo "<td>".$value['referencias']."</td>";
+						  echo "</tr>";
+                          
+                          
+                          
+
+                       
+                      }
+
+
+                    ?>
+                    </table>
+            </div>
+          </div>
 </section>
         
 	<?php include ('../layouts/footer.php'); ?>

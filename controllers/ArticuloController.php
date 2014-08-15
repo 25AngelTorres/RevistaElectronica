@@ -3,6 +3,18 @@
 		
 		public $muestra_errores = false;
 		public $muestra_exito = false;
+		
+		public $sql_autor = "
+			SELECT * 
+			FROM (articulo ar JOIN articulo_autor a ON ar.id_articulo = a.id_articulo) JOIN autor au ON a.id_autor = au.id_autor
+			
+		";
+		public $sql_articulos = "
+			SELECT * 
+			FROM articulo
+			
+		";
+		
 		function __construct(){
 		parent::Articulo();
 			

@@ -34,12 +34,14 @@
   
      
     	<div class="row">
+
             <div class="col-md-12">
 	              <div class="page-header">
-	                <h1 class="text-center"> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Crear Articulo <small></small></h1>
+	                <h1 class="text-center"> <a href="#"><span class="glyphicon glyphicon-th"></span></a> Crear Articulo <small></small></h1>
 	              </div>
             </div>
       	</div>
+
 		
 <!-- Errores -->
 		<div class="row">
@@ -93,7 +95,9 @@
 								
 <!-- Metodologia -->
 								<div class="form-group" >
+
 								  <label class="col-lg-2 control-label" for="metodologia">Materiales y metodos</label>
+
 								  <div class="col-lg-9">
 								  <textarea id='metodologia' cols="1000000" name="metodologia"style="  background-color:rgba(255,255,255,1);">
 								  	<?php echo $articuloC->get_metodologia(); ?>
@@ -113,7 +117,6 @@
 								</div>
 								
 							  
-
 
 
 
@@ -197,7 +200,7 @@
 		<div class="row">
             <div class="col-md-12">
 	              <div class="page-header">
-	                <h1 class="text-center"> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a>Lista de Articulos <small></small></h1>
+	                <h1 class="text-center"> <a href="#"><span class="glyphicon glyphicon-th"></span></a>Lista de Articulos <small></small></h1>
 	              </div>
             </div>
       	</div>
@@ -232,6 +235,7 @@
 	                          	</a></td>";
 							  echo "</tr>";
 	                    }
+
 
 
                     ?>

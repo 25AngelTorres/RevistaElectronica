@@ -23,7 +23,7 @@
                             <h1>Administrar Base de datos <small>Insertar</small></h1>
                         </div>
 
-                        <p class="intro-text">Para insertar dentro de la base de datos, elije la tabla a la cual quieres agregar nueva informaci&oacute;n.</p>
+                        <p class="intro-text">Para insertar dentro de la base de datos, elige la tabla a la cual quieres agregar nueva informaci&oacute;n.</p>
 
 
                         <!--<div class="page-scroll"  id="btn_opc_inser_bd">
@@ -46,7 +46,7 @@
                             <div class="col-md-6">
                                 <div class="list-group">
                                     <a href="../articulo/articulo.php" class="list-group-item">Art&iacute;culo</a>
-                                    <a href="../indice/form_indice.php" class="list-group-item">Indice</a>
+                                    <a href="../indice/form_indice.php" class="list-group-item">&Iacute;ndice</a>
                                 </div>
                             </div>
                     </div>

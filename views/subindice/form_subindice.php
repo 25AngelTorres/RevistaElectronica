@@ -56,22 +56,14 @@ include ('../layouts/url.php');
           ?>
     		  <div class="row">
                     <form role="form" id="registerForm" method="POST">
-<!-- id_indice --
-    				  <div class="col-md-12">
-    					 <div class="form-group">
-                        	<label for="id_indice" class="col-sm-8 control-label">Selecciona el indice al cual pertenece: </label>
-                        	<div class="col-sm-4">
-                                                          <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' --
-                            	<?php echo $SubindiceC->getDropDown('id_indice','titulo','indice','id_indice','id_indice'); ?>
-                        	</div>
-               </div>
-		          </div>  -->
+<!-- id_indice -->
+
 
 <!-- id_articulo -->
     				  <div class="col-md-12">
     					<div class="form-group">
-                        	<label for="id_articulo" class="col-sm-8 control-label">Selecciona el artículo que desea agregar a este subindice: </label>
-                        	<div class="col-sm-4">
+                        	<label for="id_articulo" class="col-sm-6 control-label">Selecciona el art&iacute;culo que desea agregar a este sub&iacute;ndice: </label>
+                        	<div class="col-sm-6">
                                                           <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' -->
                             	<?php echo $SubindiceC->getDropDown('id_articulo','nombre','articulo','id_articulo','id_articulo'); ?>
                         	</div>
@@ -81,8 +73,8 @@ include ('../layouts/url.php');
 <!-- numero -->
 					<div class="col-md-12">
     				  <div class="form-group">
-                        <label for="numero" class="col-sm-8 control-label"> P&aacute;gina:</label>
-                      	<div class="col-sm-4">
+                        <label for="numero" class="col-sm-6 control-label"> P&aacute;gina:</label>
+                      	<div class="col-sm-6">
                         	<input type="text" class="form-control" id="numero"  name="numero" value="<?php echo $SubindiceC->get_numero(); ?>">
                     	</div>
                       </div>
@@ -95,6 +87,7 @@ include ('../layouts/url.php');
             <div class=col-md-12>
               <div class="form-group">
                         <div class="col-sm-12">
+                          <br />
                           <input type="submit" value="Guardar"  />
                         </div>
               </div>

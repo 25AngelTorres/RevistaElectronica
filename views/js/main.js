@@ -63,12 +63,12 @@ $(document).ready(function() {
   $('#editorial').editable({inlineMode: false, theme: 'dark'})
   $('#contenido').editable({inlineMode: false, theme: 'dark'})
   $('#conclusiones').editable({inlineMode: false, theme: 'dark'})
-  
-  
-  
-  
+  $('#agradecimientos').editable({inlineMode: false, theme: 'dark'})
+  $('#referencias').editable({inlineMode: false, theme: 'dark'})
 
-
+  
+  
+  
 /*--Esto es para el validator*/
 /* Bootstrapvalidator */
             $('#registerForm').bootstrapValidator({

@@ -11,13 +11,12 @@
       include ('../../libs/Er.php');
 	  include ('../layouts/header.php');
   
-  $articuloC = new  ArticuloController();
-  if(isset($_POST['nombre'])){
-  
-  $articuloC->insertaArticulo($_POST,$_FILES);
+	  $articuloC = new  ArticuloController();
+	  if(isset($_POST['nombre'])){
+	  
+	  $articuloC->insertaArticulo($_POST,$_FILES);
 
-  }
- 
+	  }
 ?>
   
 
@@ -35,12 +34,12 @@
   
      
     	<div class="row">
-            <div class="col-md-12"><center>
-              <div class="page-header">
-                <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Articulos <small>Insertar</small></h1>
-              </div>
-            </center></div>
-          </div>
+            <div class="col-md-12">
+	              <div class="page-header">
+	                <h1 class="text-center"> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Crear Articulo <small></small></h1>
+	              </div>
+            </div>
+      	</div>
 		
 <!-- Errores -->
 		<div class="row">
@@ -59,7 +58,7 @@
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="nombre">Nombre</label>
 								<div class="col-lg-9">
-								<input type="text" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre de la revista" value="<?php echo $articuloC->get_nombre(); ?>"/>
+								<input type="text" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre del articulo" value="<?php echo $articuloC->get_nombre(); ?>"/>
 							   </div> </div>
 							  
 <!-- Resumen -->
@@ -73,7 +72,7 @@
 													
 <!-- Abstracion -->								
 								<div class="form-group" >
-								  <label class="col-lg-2 control-label"for="abstrac">Abstracci&oacute;n</label>
+								  <label class="col-lg-2 control-label"for="abstrac">Abstract</label>
 								  <div class="col-lg-9">
 								  <textarea id='abstrac' name = "abstrac" style="  background-color:rgba(255,255,255,1);">
 								  	<?php echo $articuloC->get_abstrac(); ?>
@@ -83,7 +82,7 @@
 								
 <!-- Introduccion -->		
 								<div class="form-group" >
-								  <label class="col-lg-2 control-label" for="introduccion">Introducci&oacute;n</label>
+								  <label class="col-lg-2 control-label" for="introduccion">Introducción</label>
 								  <div class="col-lg-9">
 								  <textarea id='introduccion' name = "introduccion" style="  background-color:rgba(255,255,255,1);">
 								  	<?php echo $articuloC->get_introduccion(); ?>
@@ -94,7 +93,7 @@
 								
 <!-- Metodologia -->
 								<div class="form-group" >
-								  <label class="col-lg-2 control-label" for="metodologia">Metodologia</label>
+								  <label class="col-lg-2 control-label" for="metodologia">Materiales y metodos</label>
 								  <div class="col-lg-9">
 								  <textarea id='metodologia' cols="1000000" name="metodologia"style="  background-color:rgba(255,255,255,1);">
 								  	<?php echo $articuloC->get_metodologia(); ?>
@@ -104,7 +103,7 @@
 
 <!-- Contenido -->			
 								<div class="form-group" >
-								 <label class="col-lg-2 control-label" for="contenido">Contenido</label>
+								 <label class="col-lg-2 control-label" for="contenido">Resultados y discución</label>
 								 <div class="col-lg-9">
 								  <textarea id='contenido' name = "contenido"style="  background-color:rgba(255,255,255,1);">
 								  	<?php echo $articuloC->get_contenido(); ?>
@@ -114,32 +113,11 @@
 								</div>
 								
 							  
-<!-- Fecha -->
-								
-							  <div class="form-group">
-							      <label class="col-lg-2 control-label" for="fecha_creacion">Fecha de creaci&oacute;n</label>
-								  <div class="col-lg-9">
-                                      <input type="text" class="form-control" id="dp1" name="fecha_creacion" value="<?php echo $articuloC->get_fecha_creacion(); ?>" />
 
-							  </div>
-							  </div>
 
-<!-- Archivo -->			  
-							  <div class="form-group">
-								<label class="col-lg-2 control-label" for="archiv_pdf">archivo pdf</label>
-								<div class="col-lg-9">
-								<input type="file" id="archivo_pdf" name = "archivo_pdf"/>
-								<p class="help-block">Carga un archivo pdf</p>
-							  </div>
-							  </div>
 
-<!-- Status -->		
-							  <div class="form-group">
-							    <label class="col-lg-2 control-label"for="id_status">Status</label>
-								<div class="col-lg-9">
-								 <?php echo $articuloC->getDropDown('id_status','status','status','id_status','id_status'); ?>
-							  </div>
-							  </div>
+
+
 							  
 <!-- Conclusiones -->		  
 							  <div class="form-group" >
@@ -155,7 +133,10 @@
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="agradecimientos">Agradecimientos</label>
 								<div class="col-lg-9">
-								<input type="text" class="form-control" id="agradecimientos" name = "agradecimientos" placeholder="Ingresa agradecimiento" value="<?php echo $articuloC->get_agradecimientos(); ?>"/>
+								
+								<textarea id='agradecimientos' name="agradecimientos" style="  background-color:rgba(255,255,255,1);">
+								  	<?php echo $articuloC->get_agradecimientos(); ?>
+								</textarea>	
 							  </div>
 							  </div>
 
@@ -163,13 +144,38 @@
 							  <div class="form-group" >
 								<label class="col-lg-2 control-label" for="referencias">Referencias</label>
 								<div class="col-lg-9">
-								<input type="text" class="form-control" id="referencias" name = "referencias" placeholder="Ingresa referencia" value="<?php echo $articuloC->get_referencias(); ?>" />
+								
+									<textarea id='referencias' name="referencias" style="  background-color:rgba(255,255,255,1);">
+									  	<?php echo $articuloC->get_referencias(); ?>
+									</textarea>	
 							  </div>
 							  </div>
 							  
+<!-- Fecha -->
+								
+							  <div class="form-group">
+							      <label class="col-lg-2 control-label" for="fecha_creacion">Fecha de creación</label>
+								  <div class="col-lg-9">
+                                      <input type="text" class="form-control" id="dp1" name="fecha_creacion" value="<?php echo $articuloC->get_fecha_creacion(); ?>" />
 
+							  	</div>
+							  </div>
+<!-- Status -->		
+							  <div class="form-group">
+							    <label class="col-lg-2 control-label"for="id_status">Status</label>
+								<div class="col-lg-9">
+								 <?php echo $articuloC->getDropDown('id_status','status','status','id_status','id_status'); ?>
+							  </div>
+							  </div>
 
-							  
+<!-- Archivo -->			  
+							  <div class="form-group">
+								<label class="col-lg-2 control-label" for="archiv_pdf">archivo pdf</label>
+								<div class="col-lg-9">
+								<input type="file" id="archivo_pdf" name = "archivo_pdf"/>
+									<p class="help-block">Carga un archivo pdf del articulo</p>
+								  </div>
+							  </div>			  
 		  
 							  <div>
 							  <center><button type="submit" class="btn btn-default">Guardar</button><center>
@@ -184,57 +190,48 @@
 		
 			
         </div>
+
+
+
+
+		<div class="row">
+            <div class="col-md-12">
+	              <div class="page-header">
+	                <h1 class="text-center"> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a>Lista de Articulos <small></small></h1>
+	              </div>
+            </div>
+      	</div>
+
+
+
+
 		
 		<div class="row">
             <div class="col-md-10 col-md-offset-1"  id="tabla">
 			         
                     <table class="table table-striped">
+                    	<tr>
+                    		<th>Nombre del articulo</th>
+                    		<th>Opciones</th>
+                    	</tr>
                     <?php 
 
-                      $data = $articuloC->consulta_sql($articuloC->sql_articulos)->getArray(); 
-					  $data2 = $articuloC->consulta_sql($articuloC->sql_autor)->getArray(); 
-                      
-                      /*print_r($data);
-                      die();*/
-                     foreach ($data as $value) {
-                          echo "<tr>";
-                          echo "<td><strong>Nombre del articulo</strong> </br><center>".$value['nombre']."</center>";
-						  echo "</tr>";
-				        foreach ($data2 as $value) {
-						  echo "<tr>";
-                          echo "<td><strong>Autor</strong></br><center>".$value['nombre']."</center></td>";
-						  echo "</tr>";
-						}
-						  echo "<tr>";
-						  echo "<td><strong>Resumen</strong></br></br>".$value['resumen']."</td>";
-						  echo "</tr>";
-						  echo "<tr>";
-						  echo "<td><strong>Abstraci&oacute;n </strong></br></br>".$value['abstrac']."</td>";
-						  echo "</tr>";
-						  echo "<tr>";
-						  echo "<td><strong>Introducci&oacute;n</strong> </br></br>".$value['introduccion']."</td>";
-						  echo "</tr>";
-						  echo "<tr>";
-						  echo "<td><strong>metodologia </strong></br></br>".$value['metodologia']."</td>";
-						  echo "</tr>";
-						  echo "<tr>";
-						  echo "<td><strong>Contenido</strong> </br></br>".$value['contenido']."</td>";
-						  echo "</tr>";
-						  echo "<tr>";
-						  echo "<td><strong>Conclusiones</strong> </br></br>".$value['conclusiones']."</td>";
-						  echo "</tr>";
-						  echo "<tr>";
-						  echo "<td><strong>Agredecimentos </strong></br></br>".$value['agradecimientos']."</td>";
-						  echo "</tr>";
-						  echo "<tr>";
-						  echo "<td><strong>Referencias </strong></br></br>".$value['referencias']."</td>";
-						  echo "</tr>";
-						  
-                          
-                          
-
-                       
-                      }
+	                    $data = $articuloC->consulta_sql($articuloC->sql_articulos)->getArray(); 
+						$data2 = $articuloC->consulta_sql($articuloC->sql_autor)->getArray(); 
+	                      
+	                    /*print_r($data);
+	                    die();*/
+	                    foreach ($data as $value) {
+	                          echo "<tr>";
+	                          	echo "<td>".$value['nombre']."</td>";
+	                          	
+							
+	                          	echo "<td><a class='btn btn-primary'
+	                          		href='verArticulo.php?id_articulo=".$value['id_articulo']."'>
+	                          		Ver articulo
+	                          	</a></td>";
+							  echo "</tr>";
+	                    }
 
 
                     ?>

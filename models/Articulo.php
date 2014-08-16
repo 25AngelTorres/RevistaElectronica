@@ -7,17 +7,17 @@ class Articulo extends Modelo{
    
    public $atributos = array(
         'nombre'=>array(),
-	    'resumen'=>array(),
-	    'abstrac'=>array(),
-		'introduccion'=>array(),
-		'metodologia'=>array(),
-		'contenido'=>array(),
-		'fecha_creacion'=>array(),
-		'archivo_pdf'=>array(),
-		'id_status'=>array(),
-		'conclusiones'=>array(),
-		'agradecimientos'=>array(),
-		'referencias'=>array(),
+    	  'resumen'=>array(),
+    	  'abstrac'=>array(),
+    		'introduccion'=>array(),
+    		'metodologia'=>array(),
+    		'contenido'=>array(),
+    		'fecha_creacion'=>array(),
+    		'archivo_pdf'=>array(),
+    		'id_status'=>array(),
+    		'conclusiones'=>array(),
+    		'agradecimientos'=>array(),
+    		'referencias'=>array(),
    );
    
    public $errores = array( );
@@ -191,7 +191,7 @@ class Articulo extends Modelo{
         if ( $valor['size']>102400000){
             $this->errores[] = 'Tamaño de imagen ('.$valor["size"].'). Sobrepasa el tamaño maximo';
         }
-        //trim simplemente quita espacios al principio y final de la cadena
+        //trim quita espacios al principio y final de la cadena
         $this->archivo_pdf = trim($valor['name']);
     }
  
@@ -240,9 +240,9 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
-           $this->errores[] = "Este agradecimiento (".$valor.") no es valido";
-       }
+       //if ( !$er->valida_nombre($valor) ){
+       //    $this->errores[] = "Este agradecimiento (".$valor.") no es valido";
+       //}
 
               
        $this->agradecimientos = trim($valor);
@@ -258,9 +258,9 @@ class Articulo extends Modelo{
 
        $er = new Er();
        
-       if ( !$er->valida_nombre($valor) ){
-           $this->errores[] = "Esta refencia (".$valor.") no es valido";
-       }
+       //if ( !$er->valida_nombre($valor) ){
+       //    $this->errores[] = "Esta refencia (".$valor.") no es valido";
+       //}
 
               
        $this->referencias = trim($valor);

@@ -65,6 +65,7 @@ $(document).ready(function() {
   $('#conclusiones').editable({inlineMode: false, theme: 'dark'})
   $('#agradecimientos').editable({inlineMode: false, theme: 'dark'})
   $('#referencias').editable({inlineMode: false, theme: 'dark'})
+    $('#nombre').editable({inlineMode: false, theme: 'dark'})
 
   
   
@@ -183,7 +184,7 @@ $(document).ready(function() {
                       message: 'Debe ser mayor a 1 caracteres y menor a 500'
                     },
                     regexp: {
-                      regexp: /^[a-zA-Z0-9_ -]+$/,
+                      regexp: /^[a-zA-Z0-9. -_]+$/,
                       message: 'Formato de nombre no valido'
                     }
                   }

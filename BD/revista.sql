@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 21-08-2014 a las 08:25:46
+-- Tiempo de generación: 21-08-2014 a las 08:51:10
 -- Versión del servidor: 5.5.38-0ubuntu0.14.04.1
 -- Versión de PHP: 5.5.9-1ubuntu4.3
 
@@ -44,7 +44,14 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   PRIMARY KEY (`id_articulo`),
   KEY `fk_status_articulo_idx` (`id_status`),
   KEY `idx_articulo` (`id_indice_articulo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `articulo`
+--
+
+INSERT INTO `articulo` (`id_articulo`, `nombre`, `resumen`, `abstrac`, `introduccion`, `metodologia`, `contenido`, `fecha_creacion`, `archivo_pdf`, `id_status`, `conclusiones`, `agradecimientos`, `referencias`, `id_indice_articulo`) VALUES
+(1, 'f<p>dddddddddddddddddddddd ddddd<br></p>', '<p>ffffffffffffff fffffffffffff<br></p>', '<p>ssssssssssssssss sssssssss<br></p>', '<p>ddddddddddddddd dddddddddd<br></p>', '<p>ssssssssssssssssss ddddddddddd<br></p>', '<p>dddddddddd sssssssssssss<br></p>', '2014-08-22 05:00:00', 'Calendario Escolar Ago-Dic 2014.pdf', 1, '<p>dddddddddddddddddddd ffffffffffffff<br></p>', '<p>ssssssssssssssssssss ddddddddddddd<br></p>', '<p>dddddddddddd ssssssssssssssssssss<br></p>', NULL);
 
 -- --------------------------------------------------------
 
@@ -83,10 +90,11 @@ CREATE TABLE IF NOT EXISTS `autor` (
 
 CREATE TABLE IF NOT EXISTS `contenido_extra` (
   `id_contenido_extra` int(11) NOT NULL AUTO_INCREMENT,
-  `titulo` longtext,
+  `nombre` longtext,
   `archivo_pdf` varchar(100) DEFAULT NULL,
   `id_tipo_contenido` int(11) DEFAULT NULL,
   `id_indice_articulo` int(11) DEFAULT NULL,
+  `contenido` longtext NOT NULL,
   PRIMARY KEY (`id_contenido_extra`),
   KEY `idx_contenido_extra` (`id_tipo_contenido`),
   KEY `idx_contenido_extra_0` (`id_indice_articulo`)

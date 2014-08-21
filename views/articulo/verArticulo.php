@@ -68,6 +68,7 @@
 						  echo "</tr>";
 
 						  echo "<tr>";
+						  		if(trim($value['archivo_pdf']) != '')
 						  		echo "<td><strong>Archivo PDF</strong></br>
 						  			</br>
 						  			<iframe src='".BASEURL."/views/upload/".$value['archivo_pdf']."' width='600' height='800' >

@@ -41,6 +41,7 @@
                                 <div class="list-group">
                                     <a href="../revista/form_revista.php" class="list-group-item">Revista</a>
                                     <a href="../autor/autor.php" class="list-group-item">Autor</a>
+                                    <a href="../contenido_extra/form_contenido_extra.php" class="list-group-item">Contenido extra</a>
                                 </div>
                             </div>
                             <div class="col-md-6">

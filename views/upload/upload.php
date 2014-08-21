@@ -7,7 +7,7 @@
  }else{
  	//echo "Error en upload file";
  }
- $imagen = array( 'link' => 'http://localhost/RevistaElectronica/views/upload/'.$_FILES['file']['name'] ); 
+ $imagen = array( 'link' => BASEURL.'/views/upload/'.$_FILES['file']['name'] ); 
  
  echo json_encode($imagen);
  

@@ -5,8 +5,8 @@
 if ("undefined" == typeof jQuery) throw new Error("Froala requires jQuery");
 ! function(a) {
   /**/
-  //var baseUrl = 'http://leopard.itc.mx/industrial/';
-  var baseUrl ='https://localhost:8080/RevistaElectronica/'
+  var baseUrl = 'http://leopard.itc.mx/industrial/';
+  //var baseUrl ='https://localhost:8080/RevistaElectronica/'
   /**/
   "use strict";
   var b = function(c, d) {

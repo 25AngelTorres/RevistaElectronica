@@ -26,8 +26,8 @@
 	<section  class="bg-light-gray">
   		<a class='btn btn-info'
 	  		href='articulo.php'>
-	  		Crear articulo
-	  	</a>
+	  		Regresar
+	  	</a><hr>
          <table class="table table-striped">
                     <?php 
 
@@ -35,7 +35,7 @@
 					  
                     foreach ($data as $value) {
                           echo "<tr>";
-                          echo "<td><strong>Nombre del articulo</strong> </br><center>".$value['nombre']."</center>";
+                          echo "<td><strong>Nombre del articulo</strong> </br>".$value['nombre'];
 						  echo "</tr>";
 				        //foreach ($data2 as $value) {
 						//  echo "<tr>";

@@ -216,6 +216,7 @@
                     	<tr>
                     		<th>Nombre del articulo</th>
                     		<th>Opciones</th>
+                    		<th>Opciones</th>
                     	</tr>
                     <?php 
 
@@ -225,15 +226,25 @@
 	                    /*print_r($data);
 	                    die();*/
 	                    foreach ($data as $value) {
-	                          echo "<tr>";
-	                          	echo "<td>".$value['nombre']."</td>";
+	                        echo "<tr>";
+	                         	echo "<td>".$value['nombre']."</td>";
 	                          	
 							
-	                          	echo "<td><a class='btn btn-primary'
-	                          		href='verArticulo.php?id_articulo=".$value['id_articulo']."'>
-	                          		Ver articulo
-	                          	</a></td>";
-							  echo "</tr>";
+	                          	echo "<td>
+		                          		<a class='btn btn-primary'
+			                          		href='verArticulo.php?id_articulo=".$value['id_articulo']."'>
+			                          		Ver articulo
+		                          		</a>
+                          		</td>";
+
+	                          	echo "<td>
+		                          		<a class='btn btn-primary'
+			                          		href='editarArticulo.php?id_articulo=".$value['id_articulo']."'>
+			                          		Editar articulo
+		                          		</a>
+                          		</td>";	
+
+							echo "</tr>";
 	                    }
 
 

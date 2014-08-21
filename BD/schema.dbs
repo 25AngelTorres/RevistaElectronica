@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MySql" id="Project9600608" database="MySql" >
+	<schema name="revista" catalogname="revista" defo="y" >
+		<table name="articulo" >
+			<column name="id_articulo" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="nombre" type="varchar" length="500" decimal="0" jt="12" mandatory="y" />
+			<column name="resumen" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="abstrac" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="introduccion" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="metodologia" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="contenido" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="fecha_creacion" type="timestamp" length="19" decimal="0" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<column name="archivo_pdf" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="id_status" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="conclusiones" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="agradecimientos" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="referencias" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="id_indice_articulo" type="int" jt="4" />
+			<index name="pk_articulo" unique="PRIMARY_KEY" >
+				<column name="id_articulo" />
+			</index>
+			<index name="fk_status_articulo_idx" unique="NORMAL" >
+				<column name="id_status" />
+			</index>
+			<index name="idx_articulo" unique="NORMAL" >
+				<column name="id_indice_articulo" />
+			</index>
+			<fk name="fk_status_articulo" to_schema="revista" to_table="status" >
+				<fk_column name="id_status" pk="id_status" />
+			</fk>
+			<fk name="fk_articulo_indice_articulo_1" to_schema="revista" to_table="indice_articulo" >
+				<fk_column name="id_indice_articulo" pk="id_indice_articulo" />
+			</fk>
+		</table>
+		<table name="articulo_autor" >
+			<column name="id_articulo_autor" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="id_articulo" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="id_autor" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<index name="pk_articulo_autor" unique="PRIMARY_KEY" >
+				<column name="id_articulo_autor" />
+			</index>
+			<index name="fk_articulo_idx" unique="NORMAL" >
+				<column name="id_autor" />
+			</index>
+			<index name="fk_autor__idx" unique="NORMAL" >
+				<column name="id_articulo" />
+			</index>
+			<fk name="fk_autor_articulo" to_schema="revista" to_table="articulo" >
+				<fk_column name="id_articulo" pk="id_articulo" />
+			</fk>
+			<fk name="fk_articulo_autor" to_schema="revista" to_table="autor" >
+				<fk_column name="id_autor" pk="id_autor" />
+			</fk>
+		</table>
+		<table name="autor" >
+			<column name="id_autor" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="nombre" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
+			<column name="apellidos" type="varchar" length="200" decimal="0" jt="12" mandatory="y" />
+			<column name="email" type="varchar" length="100" decimal="0" jt="12" />
+			<index name="pk_autor" unique="PRIMARY_KEY" >
+				<column name="id_autor" />
+			</index>
+		</table>
+		<table name="contenido_extra" >
+			<column name="id_contenido_extra" type="int" jt="4" mandatory="y" autoincrement="y" />
+			<column name="titulo" type="longtext" jt="-1" />
+			<column name="archivo_pdf" type="varchar" length="100" jt="12" />
+			<column name="id_tipo_contenido" type="int" jt="4" />
+			<column name="id_indice_articulo" type="int" jt="4" />
+			<index name="pk_contenido_extra" unique="PRIMARY_KEY" >
+				<column name="id_contenido_extra" />
+			</index>
+			<index name="idx_contenido_extra" unique="NORMAL" >
+				<column name="id_tipo_contenido" />
+			</index>
+			<index name="idx_contenido_extra_0" unique="NORMAL" >
+				<column name="id_indice_articulo" />
+			</index>
+			<fk name="fk_contenido_extra" to_schema="revista" to_table="tipo_contenido" >
+				<fk_column name="id_tipo_contenido" pk="id_tipo_contenido" />
+			</fk>
+			<fk name="fk_contenido_extra_1" to_schema="revista" to_table="indice_articulo" >
+				<fk_column name="id_indice_articulo" pk="id_indice_articulo" />
+			</fk>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="indice" >
+			<column name="id_indice" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="titulo" type="varchar" length="500" decimal="0" jt="12" mandatory="y" />
+			<column name="numero" type="int" length="10" decimal="0" jt="4" />
+			<column name="id_revista" type="int" length="10" decimal="0" jt="4" />
+			<index name="pk_indice" unique="PRIMARY_KEY" >
+				<column name="id_indice" />
+			</index>
+			<index name="fk_revista_idx" unique="NORMAL" >
+				<column name="id_revista" />
+			</index>
+			<fk name="fk_revista" to_schema="revista" to_table="revista" >
+				<fk_column name="id_revista" pk="id_revista" />
+			</fk>
+		</table>
+		<table name="indice_articulo" >
+			<column name="id_indice_articulo" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="id_indice" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="numero" type="float" length="12" decimal="0" jt="7" mandatory="y" />
+			<index name="pk_indice_articulo" unique="PRIMARY_KEY" >
+				<column name="id_indice_articulo" />
+			</index>
+			<index name="fk_indice_idx" unique="NORMAL" >
+				<column name="id_indice" />
+			</index>
+			<fk name="fk_indice" to_schema="revista" to_table="indice" >
+				<fk_column name="id_indice" pk="id_indice" />
+			</fk>
+		</table>
+		<table name="revista" >
+			<column name="id_revista" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="nombre" type="varchar" length="500" decimal="0" jt="12" mandatory="y" />
+			<column name="portada" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
+			<column name="fecha" type="date" length="10" decimal="0" jt="91" mandatory="y" />
+			<column name="volumen" type="varchar" length="45" decimal="0" jt="12" mandatory="y" />
+			<column name="titulo" type="varchar" length="200" decimal="0" jt="12" />
+			<column name="subtitulo" type="varchar" length="200" decimal="0" jt="12" />
+			<column name="numero" type="int" length="10" decimal="0" jt="4" />
+			<column name="clave" type="varchar" length="45" decimal="0" jt="12" />
+			<column name="directorio" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="editorial" type="longtext" length="2147483647" decimal="0" jt="-1" />
+			<column name="id_status" type="int" length="10" decimal="0" jt="4" />
+			<index name="pk_revista" unique="PRIMARY_KEY" >
+				<column name="id_revista" />
+			</index>
+			<index name="fk_status_revista_idx" unique="NORMAL" >
+				<column name="id_status" />
+			</index>
+			<fk name="fk_status_revista" to_schema="revista" to_table="status" >
+				<fk_column name="id_status" pk="id_status" />
+			</fk>
+		</table>
+		<table name="status" >
+			<column name="id_status" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="status" type="varchar" length="45" decimal="0" jt="12" />
+			<index name="pk_status" unique="PRIMARY_KEY" >
+				<column name="id_status" />
+			</index>
+		</table>
+		<table name="tipo_contenido" >
+			<column name="id_tipo_contenido" type="int" jt="4" mandatory="y" autoincrement="y" />
+			<column name="tipo" type="varchar" length="200" jt="12" />
+			<index name="pk_tipo_contenido" unique="PRIMARY_KEY" >
+				<column name="id_tipo_contenido" />
+			</index>
+			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="usuarios" >
+			<column name="id_usuario" type="int" length="10" decimal="0" jt="4" mandatory="y" autoincrement="y" />
+			<column name="email" type="varchar" length="200" decimal="0" jt="12" />
+			<column name="password" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="rol" type="varchar" length="25" decimal="0" jt="12" />
+			<index name="pk_usuarios" unique="PRIMARY_KEY" >
+				<column name="id_usuario" />
+			</index>
+		</table>
+	</schema>
+	<connector name="MySql" database="MySql" driver_class="com.mysql.jdbc.Driver" driver_jar="mysql-connector-java-5.1.25-bin.jar" host="localhost" port="3306" instance="revista" user="root" passwd="cm9vdA==" schema_mapping="" />
+	<layout id="Layout9619447" name="revista" joined_routing="y" show_relation_columns="y" >
+		<entity schema="revista" name="articulo_autor" color="f5d9b5" x="195" y="375" />
+		<entity schema="revista" name="revista" color="f5d9b5" x="210" y="45" />
+		<entity schema="revista" name="usuarios" color="c0f5b5" x="75" y="45" />
+		<entity schema="revista" name="autor" color="f5d9b5" x="45" y="375" />
+		<entity schema="revista" name="indice" color="f5d9b5" x="465" y="60" />
+		<entity schema="revista" name="tipo_contenido" color="c0d4f3" x="690" y="510" />
+		<entity schema="revista" name="indice_articulo" color="f5d9b5" x="450" y="195" />
+		<entity schema="revista" name="contenido_extra" color="c0d4f3" x="690" y="375" />
+		<entity schema="revista" name="articulo" color="f5d9b5" x="405" y="375" />
+		<entity schema="revista" name="status" color="c0f5b5" x="705" y="75" />
+	</layout>
+</project>

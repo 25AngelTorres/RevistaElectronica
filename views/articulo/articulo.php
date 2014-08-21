@@ -57,11 +57,15 @@
 						    <form class="form-horizontal" method="POST"  id="registerForm" enctype="multipart/form-data">
 
 <!-- Nombre -->
+							   
+							   
 							  <div class="form-group" >
-								<label class="col-lg-2 control-label" for="nombre">Nombre</label>
-								<div class="col-lg-9">
-								<input type="text" class="form-control" id="nombre" name = "nombre" placeholder="Ingresa nombre del articulo" value="<?php echo $articuloC->get_nombre(); ?>"/>
-							   </div> </div>
+								  <label class="col-lg-2 control-label" for="nombre">Nombre</label>
+								  <div class="col-lg-9">
+								  <textarea  class="form-control" id='nombre' name = "nombre" style="  background-color:rgba(255,255,255,1);" >
+								  	<?php echo $articuloC->get_nombre(); ?>
+								  </textarea>	
+                                </div>	  </div>		
 							  
 <!-- Resumen -->
 							  <div class="form-group" >
@@ -71,6 +75,8 @@
 								  	<?php echo $articuloC->get_resumen(); ?>
 								  </textarea>	
                                 </div>	  </div>	
+								
+								
 													
 <!-- Abstracion -->								
 								<div class="form-group" >
@@ -96,7 +102,7 @@
 <!-- Metodologia -->
 								<div class="form-group" >
 
-								  <label class="col-lg-2 control-label" for="metodologia">Materiales y metodos</label>
+								  <label class="col-lg-2 control-label" for="metodologia">Materiales y m&eacute;todos</label>
 
 								  <div class="col-lg-9">
 								  <textarea id='metodologia' cols="1000000" name="metodologia"style="  background-color:rgba(255,255,255,1);">

@@ -8,3 +8,8 @@
 #tabla{
 	padding-top: 50px;
 }
+
+header {
+    background-image: url(../img/fondo001.jpg);
+	background-position: top;
+}	

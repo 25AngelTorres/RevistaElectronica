@@ -65,7 +65,7 @@ $RevistaC = new RevistaController();
                   <div class="form-group">
                     <label for="nombre" class="col-sm-3 control-label">Nombre</label>
                     <div class="col-sm-6">
-                     <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $RevistaC->get_nombre(); ?>" />
+                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa nombre de la revista" value="<?php echo $RevistaC->get_nombre(); ?>" />
                     </div>
                   </div>
 <!--portada-->
@@ -94,21 +94,21 @@ $RevistaC = new RevistaController();
                       <div class="form-group">
                       	<label for="volumen" class="col-sm-3 control-label">Volumen de la revista</label>
                           <div class='col-sm-6'>
-                        <input type="text" class="form-control" id="volumen" name="volumen" value="<?php echo $RevistaC->get_volumen(); ?>" />
+                        <input type="text" class="form-control" id="volumen" name="volumen" placeholder="Ingresa volumen de la revista" value="<?php echo $RevistaC->get_volumen(); ?>" />
                         </div>
                       </div>
 <!-- Titulo -->
 						<div class="form-group">
                         <label for="titulo" class="col-sm-3 control-label">T&iacute;tulo de la revista</label>
                         <div class='col-sm-6'>
-                        <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $RevistaC->get_titulo(); ?>" />
+                        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingresa t&iacute;tulo de la revista" value="<?php echo $RevistaC->get_titulo(); ?>" />
                         </div>
                          </div>
 <!-- Subtitulo -->
 				<div class="form-group">
                         <label for="subtitulo" class="col-sm-3 control-label">Subt&iacute;tulo de la revista</label>
                   <div class='col-sm-6'>
-                        <input type="text" class="form-control" id="subtitulo" name="subtitulo" value=" <?php echo $RevistaC->get_subtitulo(); ?>" />
+                        <input type="text" class="form-control" id="subtitulo" name="subtitulo" placeholder="Ingresa subt&iacute;tulo de la revista" value=" <?php echo $RevistaC->get_subtitulo(); ?>" />
                    </div>
               </div>
 
@@ -116,14 +116,14 @@ $RevistaC = new RevistaController();
 				<div class="form-group">
                         <label for="numero" class="col-sm-3 control-label">N&uacute;mero de la revista</label>
                      <div class='col-sm-6'>
-                        <input type="text" class="form-control" id="numero" name="numero" value="<?php echo $RevistaC->get_numero(); ?>" />
+                        <input type="text" class="form-control" id="numero" name="numero" placeholder="Ingresa n&uacute;mero de la revista" value="<?php echo $RevistaC->get_numero(); ?>" />
                      </div>
                </div>
 <!-- Clave -->
          				<div class="form-group">
                         <label for="clave" class="col-sm-3 control-label" >Clave</label>
                       <div class='col-sm-6'>
-                        <input type="text" class="form-control" id="clave" name="clave" value="<?php echo $RevistaC->get_clave(); ?>" />
+                        <input type="text" class="form-control" id="clave" name="clave" placeholder="Ingresa clave de la revista" value="<?php echo $RevistaC->get_clave(); ?>" />
                        </div>
                       </div>
 <!-- Directorio -->
@@ -137,18 +137,14 @@ $RevistaC = new RevistaController();
                   </div>	
 						</div>
 <!--Editorial -->
-         				
-						 
-						 
-						 <div class="form-group" >
-								  <label for="editorial" class="col-sm-3 control-label">Editorial de la revista</label>
-								   <div class='col-sm-6'>
-								  <textarea id='editorial' name = "editorial" style="  background-color:rgba(255,255,255,1);">
-                      <?php echo $RevistaC->get_directorio(); ?>
-                  </textarea>	
-                                </div>	
-								</div>
-
+						<div class="form-group" >
+						  <label for="editorial" class="col-sm-3 control-label">Editorial de la revista</label>
+							<div class='col-sm-6'>
+							  <textarea id='editorial' name = "editorial" style="  background-color:rgba(255,255,255,1);">
+                  <?php echo $RevistaC->get_editorial(); ?>
+                </textarea>	
+              </div>	
+						</div>
 <!-- Status -->
  					<div class="form-group">
                     <label for="id_status" class="col-sm-3 control-label">Estatus: </label>

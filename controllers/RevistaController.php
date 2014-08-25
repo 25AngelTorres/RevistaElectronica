@@ -29,7 +29,7 @@ Contine las clases
 			//$revista=new Revista();
 
 			$this->set_nombre($datos['nombre']);
-			$this->set_portada($files['portada']);
+			$this->set_portada($files['portada'],$datos['nombre']);
 			$this->set_fecha($datos['fecha']);
 			$this->set_volumen($datos['volumen']);
 			$this->set_titulo($datos['titulo']);
@@ -84,11 +84,85 @@ Contine las clases
                           //echo "<td>".$value['id_indice']."</td>";
                           echo "<td><strong>".$value['nombre']."</strong></td>";
                           //echo "<td>".$value['titulo']."</td>";
-                          echo "<td><a class='btn btn-default' href='".BASEURL."/views/subindice/view_revista.php?id_revista=".$value['id_revista']."' > Mas.</a></td>";
-                          echo "<td><a class='btn btn-default' href='".BASEURL."/views/indice/form_indice.php?id_indice=".$value['id_revista']."' > agregar indice.</a></td>";
-                          
-
+                         echo "<td><a class='btn btn-primary' href='".BASEURL."/views/revista/view_revista.php?id_revista=".$value['id_revista']."' > Mas.</a></td>";
+                          echo "<td><a class='btn btn-info' href='".BASEURL."/views/indice/form_indice.php?id_revista=".$value['id_revista']."' > agregar indice.</a></td>";
                         echo "</tr>";
+                      }
+		}
+
+		public function tableSQLMas($id){
+			$sqlMas='select * from revista where id_revista = "'.$id.'"';
+			$data = $this->consulta_sql($sqlMas)->getArray(); 
+
+			$sqlMasStatus="select status from status where id_status= '".$data['0']['id_status']."'";
+			$data2 = $this->consulta_sql($sqlMasStatus)->getArray(); 
+
+                      /*echo "<pre>";
+                      print_r($data);
+                      print_r($data2);
+                      echo "</pre>";
+                      //die();*/
+
+                      foreach ($data as $value) {
+                        echo "<tr>";
+                        	echo "<th> Id Revista </th>
+                        			<th> Nombre </th>
+                        			<th> T&iacute;tulo </th>
+                        			<th> Subt&iacute;tulo </th>
+                        </tr>";
+                        echo "<tr>";
+                          echo "<td>".$value['id_revista']."</td>";
+                          echo "<td>".$value['nombre']."</td>";
+                          echo "<td>".$value['titulo']."</td>";
+                          echo "<td>".$value['subtitulo']."</td>";
+                        echo "</tr>";
+                        echo "<tr><td colspan='4'><bt /></td> </tr>";
+                        echo "<tr>";
+                        	echo "<th> Volumen </th>
+                        			<th> N&uacute;mero </th>
+                        			<th> Clave </th>
+                        			<th> Fecha de creacion </th>
+                        </tr>";
+                        echo "<tr>";
+                          echo "<td>".$value['volumen']."</td>";
+                          echo "<td>".$value['numero']."</td>";
+                          echo "<td>".$value['clave']."</td>";
+                          echo "<td>".$value['fecha']."</td>";
+                        echo "</tr>";
+
+                        echo "<tr><td colspan='4'><bt /></td> </tr>";
+                        echo "<tr>";
+                        	echo "<th colspan ='4'> Estatus </th>
+                        			</tr>";
+                        echo "<tr>";
+                          echo "<td colspan ='4'>".$data2['0']['status']."</td>";
+                        echo "</tr>";
+
+                        echo "<tr><td colspan='4'><bt /></td> </tr>";
+                        echo "<tr>";
+                        	echo "<th colspan ='4'> Portada </th>
+                        			</tr>";
+                        echo "<tr>";
+                          echo "<td colspan ='4'> <img src='../upload/".$value['portada']."'' alt='".$value['portada']."' width= '50%' />  </td>";
+                        echo "</tr>";
+
+                        echo "<tr><td colspan='4'><bt /></td> </tr>";
+                        echo "<tr>";
+                        	echo "<th colspan ='4'> Directorio </th>
+                        			</tr>";
+                        echo "<tr>";
+                          echo "<td colspan ='4'>".$value['directorio']."</td>";
+                        echo "</tr>";
+
+                        echo "<tr><td colspan='4'><bt /></td> </tr>";
+                        echo "<tr>";
+                        	echo "<th colspan ='4'> Editorial </th>
+                        			</tr>";
+                        echo "<tr>";
+                          echo "<td colspan ='4'>".$value['editorial']."</td>";
+                        echo "</tr>";
+
+                        echo "<td><a class='btn btn-info' href='".BASEURL."/views/indice/form_indice.php?id_revista=".$value['id_revista']."' > agregar indice.</a></td>";
                       }
 		}
 

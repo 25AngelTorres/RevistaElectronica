@@ -62,9 +62,23 @@ Contine las clases
 
 		public function tableSQL(){
 			$data = $this->consulta_sql($this->sql_indices)->getArray(); 
-                      
+
                       /*print_r($data);
                       die();*/
+                      echo "<tr>
+                      			<th>
+									Revista
+                      			</th>
+                      			<th>
+									N&uacute;mero
+                      			</th>
+                      			<th>
+									&Iacute;ndice
+								</th>
+								<th>
+									Art&iacute;culos
+								</th>
+                  			</tr>";
                       foreach ($data as $value) {
                         echo "<tr>";
                           echo "<td>".$value['nombre']."</td>";
@@ -79,6 +93,16 @@ Contine las clases
                         echo "</tr>";
                       }
 		}
+
+		public function header1($tabla){
+			$sql='SELECT nombre FROM revista WHERE id_revista = "'.$tabla.'"';
+			$data = $this->consulta_sql($sql)->getArray();
+			/*echo '<pre>';
+			print_r($data);
+			echo '</pre>';*/
+			echo " para la revista \"<i>".$data['0']['nombre']."</i> \"";
+		}
+
 		/*public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();

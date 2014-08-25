@@ -14,6 +14,9 @@ Contine las clases
 							JOIN revista r ON r.id_revista = i.id_revista
 							';
 		//
+		//
+		//actualiza_expandido
+
 
 		function __construct(){
 			 parent::Subindice();
@@ -33,7 +36,11 @@ Contine las clases
 
 			$this->set_id_indice($idIndice);
 			$this->set_numero($datos['numero']);
-			$this->set_id_articulo($datos['id_articulo']);
+
+			$recordset = array();
+			$recordset['id_articulo']=$datos['id_articulo'];
+
+			//$this->set_id_articulo($datos['id_articulo']);
 
 			//Verificar si existen errores
 			if(count ($this->errores)>0){
@@ -44,7 +51,9 @@ Contine las clases
 			else{
 				$this->muestra_exito=true;
 				//Insertar en la Base de datos
-				$this->inserta($this->get_atributos());					
+				$this->inserta($this->get_atributos());			
+										//TABLA, ID, Columnas Array
+				//$this->actualiza_expandido("articulo",$datos['id_articulo'],$recordset);
 			}
 		}
 
@@ -71,17 +80,16 @@ Contine las clases
 			echo '
 				<div class="page-header">
                   <h3> <a href="../indice/form_indice.php"><span class="glyphicon glyphicon-th"></span></a>
-                  Insertar art&iacute;culos para el &iacute;ndice <i>'.$data['0']['titulo'].'</i> de la revista <i>'.$data['0']['nombre'].'</i>.</h3>
+                  Insertar art&iacute;culos para el &iacute;ndice "<i>'.$data['0']['titulo'].'</i>" de la revista "<i>'.$data['0']['nombre'].'</i>".</h3>
                   </div>';
 		}
 
 		public function tableSQL(){
 			$query = 'SELECT r.nombre AS Revista, i.titulo AS Indice, a.nombre AS Articulo, ia.numero AS Pagina
 						FROM indice_articulo ia
-						JOIN articulo a ON a.id_articulo = ia.id_articulo
-						JOIN indice i ON i.id_indice = ia.id_indice
-						JOIN revista r ON r.id_revista = i.id_revista
-						ORDER BY ia.numero
+						JOIN articulo a ON a.id_indice_articulo = ia.id_indice_articulo
+						JOIN indice i ON ia.id_indice = i.id_indice
+						JOIN revista r ON i.id_revista = r.id_revista
 						';
 			$data = $this->consulta_sql($query)->getArray();
 			/*echo '<pre>';
@@ -90,8 +98,8 @@ Contine las clases
 			echo '<table class="table">';
 			echo '<tr>
 					<th>Revista</th>
-					<th>Indice</th>
-					<th>Articulo</th>
+					<th>&Iacute;ndice</th>
+					<th>Art&iacute;culo</th>
 					<th>P&aacute;gina</th>
 				</tr>';
 			foreach ($data as $value) {

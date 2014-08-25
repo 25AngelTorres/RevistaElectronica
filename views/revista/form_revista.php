@@ -166,10 +166,7 @@ $RevistaC = new RevistaController();
 							
 					  
                     </div>
-                  </div>
-                
-                <?php//  echo $RevistaC->show_grid(); ?>
-                
+                  </div>                
                 </div>
               </div>
             </form>
@@ -202,14 +199,10 @@ $RevistaC = new RevistaController();
 
                     <?php 
                       $RevistaC->tableSQL();
-                      
-
                     ?>
               </table>
             </div>
           </div>
-      -->
-
 
 
     </div><!-- Container -->

@@ -168,12 +168,49 @@ $RevistaC = new RevistaController();
                     </div>
                   </div>
                 
-                <?php echo $RevistaC->show_grid(); ?>
+                <?php//  echo $RevistaC->show_grid(); ?>
                 
                 </div>
               </div>
             </form>
           <!-------->
+        <div class ="row">
+          <div class="col-md-12">
+            <div class="page-header">
+              <h1 class="text-center"> <a href="#"><span class="glyphicon glyphicon-th"></span></a>Lista de Revistas <small></small></h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1"  id="tabla">
+              <table class="table">
+                <tr>
+                  <th>
+                    Id Revista
+                  </th>
+                  <th>
+                    Nombre
+                  </th>
+                  <th>
+                    Mas
+                  </th>
+                  <th>
+                    Indice
+                  </th>
+                </tr>
+
+                    <?php 
+                      $RevistaC->tableSQL();
+                      
+
+                    ?>
+              </table>
+            </div>
+          </div>
+      -->
+
+
 
     </div><!-- Container -->
   </div><!-- intro-body -->

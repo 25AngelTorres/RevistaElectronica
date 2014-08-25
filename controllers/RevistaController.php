@@ -8,6 +8,7 @@ Contine las clases
 		//Instancia de la clase Revista----No necesario para todos los controladores
 		public $muestra_errores = false;
 		public $muestra_exito = false;
+		public $sql_revista = 'select * from revista ';
 
 
 		function __construct(){
@@ -50,7 +51,7 @@ Contine las clases
 			else{
 				$this->muestra_exito=true;
 				//Copiar la direccion del archivo a un nueva carpeta
-				move_uploaded_file($files['portada']['tmp_name'], "../upload/".$files['portada']['name']);
+				move_uploaded_file($files['portada']['tmp_name'], "../upload/".$datos['nombre']."_".$files['portada']['name']);
 				//Insertar en la Base de datos
 				$this->inserta($this->get_atributos());
 			};
@@ -70,6 +71,28 @@ Contine las clases
 				echo '<div class="alert alert-success" role="alert"><h4>Insercion Correcta</h4></div>';
 			}
 		}
+
+		public function tableSQL(){
+			$data = $this->consulta_sql($this->sql_revista)->getArray(); 
+                      
+                      /*print_r($data);
+                      die();*/
+
+                      foreach ($data as $value) {
+                        echo "<tr>";
+                          echo "<td>".$value['id_revista']."</td>";
+                          //echo "<td>".$value['id_indice']."</td>";
+                          echo "<td><strong>".$value['nombre']."</strong></td>";
+                          //echo "<td>".$value['titulo']."</td>";
+                          echo "<td><a class='btn btn-default' href='".BASEURL."/views/subindice/view_revista.php?id_revista=".$value['id_revista']."' > Mas.</a></td>";
+                          echo "<td><a class='btn btn-default' href='".BASEURL."/views/indice/form_indice.php?id_indice=".$value['id_revista']."' > agregar indice.</a></td>";
+                          
+
+                        echo "</tr>";
+                      }
+		}
+
+
 		/*public function validaUsuario($datos){
 			$rs = $this->consulta_sql(" select * from usuarios where email = '".$datos['email']."'  ");
         	$rows = $rs->GetArray();

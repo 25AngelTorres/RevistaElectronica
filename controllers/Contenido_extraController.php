@@ -4,18 +4,27 @@
 		public $muestra_errores = false;
 		public $muestra_exito = false;
 		
-		public $sql_autor = "
+		public $sql_contenido = "
 			SELECT * 
-			FROM (articulo ar JOIN articulo_autor a ON ar.id_articulo = a.id_articulo) JOIN autor au ON a.id_autor = au.id_autor
+			FROM contenido_extra
 		";
 		
-		public $sql_articulos = "
-			SELECT * 
-			FROM articulo
-		";
+		
 		
 		function __construct(){
 			parent::Contenido_extra();
+		}
+		
+		public function verContenido($id_contenido_extra){
+			parent::Contenido_extra();
+			$sql = "
+				SELECT * 
+					FROM Contenido_extra
+					
+
+					
+			";
+			return $this->consulta_sql($sql)->getArray();
 		}
 
 		

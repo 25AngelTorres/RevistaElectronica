@@ -63,7 +63,7 @@ class Revista extends Modelo{
     public function get_portada(){
         return $this->portada;
     } 
-    public function set_portada($valor){
+    public function set_portada($valor,$valor2){
         //objeto de la clase Er
         $er = new Er();
         if ( !$er->valida_imagen_name($valor['name'])){
@@ -77,7 +77,7 @@ class Revista extends Modelo{
             $this->errores[] = 'Tamaño de imagen ('.$valor["size"].'). Sobrepasa el tamaño maximo';
         }
         //trim simplemente quita espacios al principio y final de la cadena
-        $this->portada = trim($valor['name']);
+        $this->portada = $valor2."_".(trim($valor['name']));
     }
 //fecha
    public function get_fecha(){

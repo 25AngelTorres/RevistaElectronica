@@ -6,14 +6,13 @@ class Subindice extends Modelo{
     
     public $atributos = array(
         'id_indice'=>array(),
-        'id_articulo'=>array(),
         'numero'=>array(),
     );
 
     public $errores = array( );
     
     private $id_indice;
-	private $id_indice_articulo;
+	
 	private $numero;
        
 
@@ -57,7 +56,7 @@ class Subindice extends Modelo{
         $this->numero = trim($valor);
     }
 //id_articulo
-   public function get_id_articulo(){
+   /*public function get_id_articulo(){
         return $this->id_articulo;
     } 
     public function set_id_articulo($valor){
@@ -68,7 +67,7 @@ class Subindice extends Modelo{
         }
         //trim simplemente quita espacios al principio y final de la cadena
         $this->id_articulo = trim($valor);
-    }
+    }*/
 }
 
 ?>

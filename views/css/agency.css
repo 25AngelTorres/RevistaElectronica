@@ -253,7 +253,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #10580A;
+        background-color: rgba(10,53,6, 0.9);
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -367,7 +367,7 @@ section h3.section-subheading {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(254,209,54,.9);
+    background: rgba(19, 68, 6, 0.91);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;

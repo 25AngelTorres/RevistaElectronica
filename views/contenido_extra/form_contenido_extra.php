@@ -104,7 +104,50 @@ $ContenidoE = new Contenido_extraController();
                     </div>
                   </div>
                 
-                <?php echo $ContenidoE->show_grid(); ?>
+               <div class="row">
+            <div class="col-md-10 col-md-offset-1"  id="tabla">
+			         
+                    <table class="table table-striped">
+                    	<tr>
+                    		<th>Nombre del contenido</th>
+                    		<th>Opciones</th>
+                    		<th>Opciones</th>
+                    	</tr>
+                    <?php 
+
+	                    $data = $ContenidoE->consulta_sql($ContenidoE->sql_contenido)->getArray(); 
+						
+	                      
+	                    /*print_r($data);
+	                    die();*/
+	                    foreach ($data as $value) {
+	                        echo "<tr>";
+	                         	echo "<td>".$value['nombre']."</td>";
+	                          	
+							
+	                          	echo "<td>
+		                          		<a class='btn btn-primary'
+			                          		href='verContenido_extra.php?id_articulo=".$value['id_contenido_extra']."'>
+			                          		Ver contenido
+		                          		</a>
+                          		</td>";
+
+	                          	echo "<td>
+		                          		<!--a class='btn btn-primary'
+			                          		href='editarContenido_extra.php?id_articulo=".$value['id_contenido_extra']."'>
+			                          		Editar contenido
+		                          		</a-->
+                          		</td>";	
+
+							echo "</tr>";
+	                    }
+
+
+
+                    ?>
+                    </table>
+            </div>
+          </div>
                 
                 </div>
               </div>

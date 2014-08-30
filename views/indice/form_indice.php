@@ -16,7 +16,11 @@ include ('../layouts/url.php');
 //Inicializar el controlador
   $IndiceC = new IndiceController();
   if(isset($_POST['titulo']))  {
-     /*echo "<pre>";
+
+    if(isset($_GET['id_revista'])){
+      $_POST['id_revista']=$_GET['id_revista'];
+    }
+    /*echo "<pre>";
       print_r($_POST);
     echo "</pre>";
     die();*/
@@ -41,7 +45,15 @@ include ('../layouts/url.php');
           <div class="row">
               <div class="col-md-12">
                 <div class="page-header">
-                  <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Indice <small>Insertar</small></h1>
+                  <h1> <a href="../site/BD.php"><span class="glyphicon glyphicon-th"></span></a> Indice <small>
+                    <?PHP 
+                      if(isset($_GET['id_revista'])){
+                        $IndiceC->header1($_GET['id_revista']);
+                      }
+                      else{
+                        echo "Insertar";
+                      }
+                    ?></small></h1>
                 </div>
               </div>
             </div>
@@ -66,15 +78,21 @@ include ('../layouts/url.php');
                       </div>
     				  </div>
 <!-- Revista -->
-    				  <div class="col-md-12">
-    					<div class="form-group">
-                        <label for="id_revista" class="col-sm-3 control-label">Revista: </label>
-                        <div class="col-sm-6">
-                                                          <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' -->
-                            <?php echo $IndiceC->getDropDown('id_revista','nombre','revista','id_revista','id_revista'); ?>
+              <?php 
+                if(!isset($_GET['id_revista'])){
+              ?>
+      				  <div class="col-md-12">
+      					<div class="form-group">
+                          <label for="id_revista" class="col-sm-3 control-label">Revista: </label>
+                          <div class="col-sm-6">
+                                                            <!-- $id_tabla,$nombre_columna,$tabla,$name,$id,$where = ' ' -->
+                              <?php echo $IndiceC->getDropDown('id_revista','nombre','revista','id_revista','id_revista'); ?>
+                          </div>
                         </div>
-                      </div>
-              </div>
+                </div>
+              <?php
+                }
+              ?>
 
           <div class="row">
             <div class=col-md-12>

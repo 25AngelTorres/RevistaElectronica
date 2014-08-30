@@ -25,101 +25,146 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">Contenido</h2>
+                    <h3 class="section-subheading text-muted">Contenido previo de la revista.</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+
+<!-- Entrevista -->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#entrevista" class="portfolio-link" data-toggle="moda1">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <!**--<img src="img/portfolio/roundicons.png" class="img-responsive" alt=""> -->
+                        <img src="../img/entrevista.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
+                        <h4>Entrevista</h4>
+                        <p class="text-muted"> </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+
+<!-- Articulos invitados-->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#articulos_invitados" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <!**--<img src="img/portfolio/startup-framework.png" class="img-responsive" alt=""> -->
+                        <img src="../img/articulos_invitados.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>Art&iacute;culos</h4>
+                        <p class="text-muted">Invitados</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+
+<!-- Lince noticias -->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#lince_noticias" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <!*--<img src="img/portfolio/treehouse.png" class="img-responsive" alt=""> -->
+                        <img src="../img/lince_noticias.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>Lince</h4>
+                        <p class="text-muted">Noticias</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+
+<!-- Jornadas lince de investigacion -->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#jornadas_lince_de_investigacion" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <!* -- <img src="img/portfolio/golden.png" class="img-responsive" alt=""> -->
+                        <img src="../img/jornadas_lince_de_investigacion.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>Jornadas lince de investigaci&oacute;n</h4>
+                        <p class="text-muted">Primera Edici&oacute;n</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+
+<!-- Mencion honorifica -->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#mencion_honorifica" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <!*-- <img src="img/portfolio/escape.png" class="img-responsive" alt=""> -->
+                        <img src="../img/mencion_honorifica.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>Menci&oacute;n Honor&iacute;fica</h4>
+                        <p class="text-muted"> </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+
+<!-- Tesis -->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#tesis" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <!*-- <img src="img/portfolio/dreams.png" class="img-responsive" alt=""> -->
+                        <img src="../img/tesis.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
+                        <h4>Tesis</h4>
+                        <p class="text-muted"> </p>
                     </div>
                 </div>
-            </div>
-        </div>
+
+<!-- Experiencias -->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#experiencias" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../img/experiencias.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Experiencias</h4>
+                        <p class="text-muted"> </p>
+                    </div>
+                </div>
+
+<!-- Nuestra gente -->
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#nuestra_gente" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../img/nuestra_gente.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Nuestra Gente</h4>
+                        <p class="text-muted"></p>
+                    </div>
+                </div>
+
+            </div> 
+        </div> <!-- Container -->
     </section>
 
     
-    <!-- Team Section -->
+    <!-- Team Section --
     <section id="team" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -131,7 +176,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <!*-- <img src="img/team/1.jpg" class="img-responsive img-circle" alt=""> -->
+                        <!*-- <img src="img/team/1.jpg" class="img-responsive img-circle" alt=""> --
                         <h4>Kay Garland</h4>
                         <p class="text-muted">Lead Designer</p>
                         <ul class="list-inline social-buttons">
@@ -146,7 +191,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <!*-- <img src="img/team/2.jpg" class="img-responsive img-circle" alt=""> -->
+                        <!*-- <img src="img/team/2.jpg" class="img-responsive img-circle" alt=""> --
                         <h4>Larry Parker</h4>
                         <p class="text-muted">Lead Marketer</p>
                         <ul class="list-inline social-buttons">
@@ -161,7 +206,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <!*-- <img src="img/team/3.jpg" class="img-responsive img-circle" alt=""> -->
+                        <!*-- <img src="img/team/3.jpg" class="img-responsive img-circle" alt=""> --
                         <h4>Diana Pertersen</h4>
                         <p class="text-muted">Lead Developer</p>
                         <ul class="list-inline social-buttons">
@@ -183,35 +228,35 @@
         </div>
     </section>
 
-    <!-- Clients Aside -->
+    <!-- Clients Aside --
     <aside class="clients">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <a href="#">
-                        <!*-- <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt=""> -->
+                        <!*-- <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt=""> --
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a href="#">
-                        <!*-- <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""> -->
+                        <!*-- <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""> --
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a href="#">
-                        <!*-- <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt=""> -->
+                        <!*-- <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt=""> --
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <a href="#">
-                        <!*-- <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""> -->
+                        <!*-- <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""> --
                     </a>
                 </div>
             </div>
         </div>
     </aside>
 
-    <section id="contact">
+    <!--<section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -253,7 +298,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
     <footer>
         <div class="container">
@@ -281,7 +326,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->

@@ -14,7 +14,7 @@ class Autor extends Modelo{
    public $errores = array( );
    
    private $nombre;
-   private $apelldos;
+   private $apellidos;
    private $email;
 
          

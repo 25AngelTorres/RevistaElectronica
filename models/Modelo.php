@@ -69,6 +69,23 @@ class Modelo extends Conexion {
         }
     }
 
+    public function actualiza_expandido($tabla,$id,$recordset) {
+        if (is_integer($id)) {
+            $sql = "SELECT * FROM  " . $tabla . " 
+                WHERE id = " . $id;
+
+            $record = $this->db->Execute($sql);
+            $rs = array();
+            $rs=$recordset;
+            echo "Antes de actualizar la tabla".$tabla;
+            die();
+            $sql_update = $this->db->GetUpdateSQL($record, $rs);
+            $this->get_error($this->db->Execute($sql_update), 'Error al actualizar');
+        } else {
+            die('OJO algo salio mal :(');
+        }
+    }
+
     public function elimina($where = 'null') {
 
         if ($where == 'null')

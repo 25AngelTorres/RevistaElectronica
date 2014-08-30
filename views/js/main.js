@@ -491,7 +491,7 @@ $(document).ready(function() {
                               
                               regexp: {
                                   regexp: /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/,
-                                  message: 'se requieres un correo valido por ejemplo a@hotmail.com'
+                                  message: 'se requieres un correo valido por ejemplo a@ejemplo.com'
                               }
                           }
                       },

@@ -12,9 +12,9 @@
 	  include ('../layouts/header.php');
   
 	  $articuloC = new  ArticuloController();
-	  if(isset($_POST['nombre'])){
+	  if(isset($_POST['id_articulo'])){
 	  
-	  $articuloC->insertaArticulo($_POST,$_FILES);
+	  	$articuloC->getArticulo($_POST['id_articulo']);
 
 	  }
 ?>

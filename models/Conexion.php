@@ -18,9 +18,9 @@ class Conexion {
         $this->db->debug = false;
 
 			       			//ip     user      pass    bd
-       //$this->db->Connect('localhost','root','root','revista');
-		$this->db->Connect('localhost','juan','1234','revista');
-
+        //$this->db->Connect('localhost','root','root','revista');
+		//$this->db->Connect('localhost','juan','1234','revista');
+        $this->db->Connect('localhost','industrial_usr','L34S6P3','industrial_db');
 			      
     }
     

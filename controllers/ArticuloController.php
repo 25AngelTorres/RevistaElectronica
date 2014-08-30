@@ -28,6 +28,9 @@
 			";
 			return $this->consulta_sql($sql)->getArray();
 		}
+		public function getArticulo($id_articulo){
+			
+		}
 		
 		public function insertaArticulo($datos,$archivo){
 			

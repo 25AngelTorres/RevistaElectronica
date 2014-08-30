@@ -1,14 +1,14 @@
 <?php
-	include ('../layouts/url.php');
+include ('../layouts/url.php');
  
- if(move_uploaded_file($_FILES['file']['tmp_name'], "".$_FILES['file']['name'])){
-  //echo "archivo actulizado correctamento";
+if(move_uploaded_file($_FILES['file']['tmp_name'], "".$_FILES['file']['name'])){
 	//echo "archivo actulizado correctamento";
- }else{
+	//echo "archivo actulizado correctamento";
+}else{
  	//echo "Error en upload file";
- }
- $imagen = array( 'link' => BASEURL.'/views/upload/'.$_FILES['file']['name'] ); 
+}
+$imagen = array( 'link' => BASEURL.'/views/upload/'.$_FILES['file']['name'] ); 
+
+echo json_encode($imagen);
  
- echo json_encode($imagen);
- 
- ?>
+?>
